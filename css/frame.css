@@ -1,0 +1,50 @@
+:root {
+    --gradient-pink: 228, 210, 216;
+    --gradient-purple: 166, 165, 196;
+    --frame-col: 42, 24, 37;
+
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    background-color: rgba(var(--frame-col), 0.6);
+}
+.menu {
+    display: inline-block;
+    cursor: pointer;
+
+}
+.menu > .line {
+    width: 30px !important;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+nav{
+    color: white;
+}
+
+main{
+
+    background: linear-gradient(rgb(var(--gradient-pink)), rgb(var(--gradient-purple)));
+    background-repeat: no-repeat;
+
+    /* temp: */
+    min-height: 100vh; 
+    height: fit-content;
+
+}
+
+footer{
+    background-color: rgba(var(--frame-col), 0.6);
+    color: white;
+
+    /* temp to remove whitespace: */
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
