@@ -45,14 +45,16 @@ header > section{
 
 .search-bar{
     height: fit-content;
-    padding: 0.5em;
     align-items: center;
+    border-radius: 5px;
 }
 .search-bar form{
     display: none;
 }
 .search-bar input{
     height: 30px;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
 }
 .company-name{
     text-wrap: nowrap; 
@@ -60,10 +62,13 @@ header > section{
 
 
 nav{
+    display: none;
     color: var(--accent-col);
     background-color: rgba(var(--frame-col), 0.6);
     
-    display: none;
+}
+nav a{
+    display: block;
 }
 nav.mobile-open{
     display: block;
@@ -91,6 +96,13 @@ nav.mobile-open{
         justify-content: space-evenly;
 
     }
+    /* nav:first-child{
+        margin-left: 3em;
+    }
+    nav:last-child{
+        margin-left: 3em;
+    } */
+
     .icon.menu{
         display: none;
     }
