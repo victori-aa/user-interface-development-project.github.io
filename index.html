@@ -10,36 +10,33 @@
         <title>Home</title>
 
         <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/utility.css">
         <link rel="stylesheet" href="css/typography.css">
     </head>
     <body>
         <header>
-            <section>
-                <div class="menu">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>  
-                <h1>GD Games</h1>
-                <!-- Search bar -->
-                <!-- Cart Icon -->
+            <section class="flex-row"> 
+                <img class="icon menu" src="icons/menu-icon.svg" alt="hamburger menu icon"> 
+                <h1 class="company-name">GD Games</h1>
+                <div class="flex-row">
+                    <div class="search-bar flex-row">
+                        <form>
+                            <input type="text" name="search" placeholder="Search">
+                        </form>
+                        <picture>
+                            <source media="(min-width:580px)" srcset="icons/search-dark.svg">
+                            <img class="icon search" src="icons/search-light.svg" alt="search icon"> 
+                        </picture>
+                    </div>                
+                    <img class="icon bag" src="icons/shopping-bag.svg" alt="shopping cart icon"> 
+                </div>
             </section>
             <nav>
-                <div>
-                    Shop
-                </div>
-                <div>
-                    GD Blog
-                </div>
-                <div>
-                    Game Franchises
-                </div>
-                <div>
-                    Consoles About us
-                </div>
-                <div>
-                    Shop
-                </div>
+                <div>Shop</div>
+                <div>GD Blog</div>
+                <div>Game Franchises</div>
+                <div>Consoles About us</div>
+                <div>Shop</div>
             </nav>
         </header>
         
@@ -52,27 +49,27 @@
             <div class="footer-nav">
                 <div>
                     <p>About Us</p>
-                    <!-- ARROW ICON -->
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
                 </div>
                 <div>
                     <p>Delivery</p>
-                    <!-- ARROW ICON -->
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
                 </div>
                 <div>
                     <p>Returns</p>
-                    <!-- ARROW ICON -->
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
                 </div>
                 <div>
                     <p>Refund Policy</p>
-                    <!-- ARROW ICON -->
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
                 </div>
                 <div>
                     <p>Secure Checkout</p>
-                    <!-- ARROW ICON -->
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
                 </div>
                 <div>
                     <p>Terms of Service</p>
-                    <!-- ARROW ICON -->
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
                 </div>
             </div>
             
