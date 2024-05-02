@@ -7,6 +7,7 @@
 
     --mobile-header-height: 4em;
     --desktop-header-height: 6em;
+    --desktop-nav-height: 2em;
 }
 
 body{
@@ -15,19 +16,17 @@ body{
 
 
 /* PAGE HEADER */
-.header-background{
-    height: var(--mobile-header-height);
-    background-color: rgba(var(--frame-col), 0.6);
-}
 header{
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 header > section{
     width: 100vw;
     height: var(--mobile-header-height);
-
     justify-content: space-evenly;
+
+    background-color: rgba(var(--frame-col), 0.3);
     backdrop-filter: blur(5px);
 }
 
@@ -54,6 +53,7 @@ header > section{
 .search-bar input{
     height: 30px;
     border: 0px;
+    /* invisible bg */
     background-color: rgba(0, 0, 0, 0);
 }
 .company-name{
@@ -63,9 +63,9 @@ header > section{
 
 nav{
     display: none;
-    color: var(--accent-col);
-    background-color: rgba(var(--frame-col), 0.6);
-    
+    height: var(--desktop-nav-height);
+
+    background-color: rgba(var(--frame-col), 0.5);
 }
 nav a{
     display: block;
@@ -74,7 +74,8 @@ nav.mobile-open{
     display: block;
     position: fixed;
     width: 50vw;
-    height: calc(100vh - var(--mobile-header-height));
+    height: calc(100vh - var(--mobile-header-height)) !important;
+
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
 }
@@ -94,14 +95,8 @@ nav.mobile-open{
     nav{
         display: flex;
         justify-content: space-evenly;
-
+        color: white
     }
-    /* nav:first-child{
-        margin-left: 3em;
-    }
-    nav:last-child{
-        margin-left: 3em;
-    } */
 
     .icon.menu{
         display: none;
@@ -113,10 +108,20 @@ nav.mobile-open{
         display: inline;
     }
 
+
 }
 
 
 /* PAGE CONTENT */
+main::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    background-color: rgba(var(--frame-col), 0.6);
+    
+    height: var(--mobile-header-height);
+
+}
 main{
 
     background: linear-gradient(rgb(var(--gradient-pink)), rgb(var(--gradient-purple)));
@@ -126,6 +131,14 @@ main{
     min-height: 100vh; 
     height: fit-content;
 
+}
+
+@media (min-width:580px) { 
+    main::before{
+        content:"";
+        height: calc(var(--desktop-header-height) + var(--desktop-nav-height));
+ 
+    }
 }
 
 /* PAGE FOOTER */
