@@ -62,22 +62,24 @@ header > section{
 
 
 nav{
-    display: none;
-    height: var(--desktop-nav-height);
-
-    background-color: rgba(var(--frame-col), 0.5);
+    left: -50vw;
 }
 nav a{
-    display: block;
+    display: none;
 }
 nav.mobile-open{
-    display: block;
     position: fixed;
     width: 50vw;
     height: calc(100vh - var(--mobile-header-height)) !important;
 
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
+
+    left: 0;
+    transition: 0.75s;
+}
+nav.mobile-open a{
+    display: block;
 }
 
 
@@ -93,10 +95,20 @@ nav.mobile-open{
         height: var(--desktop-header-height);
     }
     nav{
+        position: fixed;
+        width: 100vw;
         display: flex;
         justify-content: space-evenly;
-        color: white
+        color: white;
+        left: 0;
+        height: var(--desktop-nav-height);
+
+        background-color: rgba(var(--frame-col), 0.5);
     }
+    nav a{
+        display: block;
+    }
+    
 
     .icon.menu{
         display: none;
