@@ -1,8 +1,18 @@
-#   ignore all files except .html, .css, .js, and .gitignore
+#   ignore all files 
 *
+
+#   except folders, html, css, js, and gitignore
 !*/
 !.gitignore
 !*.html
 !*.css
 !*.js
+
+#   except txt, and media formats
 !*.txt
+!*.mp3
+!*.mp4
+!*.png
+!*.jpg
+!*.jpeg
+!*.svg
