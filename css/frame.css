@@ -62,29 +62,26 @@ header > section{
 
 
 nav{
-    left: -50vw;
-}
-nav a{
-    display: none;
-}
-nav.mobile-open{
     position: fixed;
+    left: -50vw;
     width: 50vw;
-    height: calc(100vh - var(--mobile-header-height)) !important;
+    height: calc(100vh - var(--mobile-header-height));
+    color: rgb(var(--accent-col));
 
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
-
-    left: 0;
-    transition: 0.75s;
+    transition: left 0.75s;
 }
-nav.mobile-open a{
+nav a{
     display: block;
 }
+nav.slide-in{
+    left: 0;
+}
 
 
 
-@media (min-width:580px) { 
+@media (min-width:580px) {  
     header{
         display: block;
     }
@@ -95,7 +92,6 @@ nav.mobile-open a{
         height: var(--desktop-header-height);
     }
     nav{
-        position: fixed;
         width: 100vw;
         display: flex;
         justify-content: space-evenly;
