@@ -33,7 +33,6 @@ function closeNavMenu(){
     removeClassFromArr(dropdownMenus, "open");
     for (let i = 0; i < dropdownMenus.length; i++){
         let content = dropdownMenus[i].querySelectorAll("a");
-        console.log(content)
         removeClassFromArr(content, "open");
     }
     
