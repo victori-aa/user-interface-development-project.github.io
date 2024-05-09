@@ -22,6 +22,8 @@ addEventListener("resize", async (event) => {
     //  remove all injected style from dropdowns
     for (let i = 0; i < dropdowns.length; i++){
         dropdowns[i].removeAttribute("style")
+        menu = dropdowns[i].lastElementChild;
+        menu.removeAttribute("style")
     }
 });
 
