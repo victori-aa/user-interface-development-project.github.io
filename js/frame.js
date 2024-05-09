@@ -18,8 +18,11 @@ addEventListener("resize", async (event) => {
     addClass(navBar, "no-transition");
     await sleep(750);
     removeClass(navBar, "no-transition");
-
     
+    //  remove all injected style from dropdowns
+    for (let i = 0; i < dropdowns.length; i++){
+        dropdowns[i].removeAttribute("style")
+    }
 });
 
 //  open/close nav sidebar on menu button click
