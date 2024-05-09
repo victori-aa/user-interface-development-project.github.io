@@ -87,20 +87,18 @@ nav.open{
     bottom: 0;
     transition: width 0.75s;
 
-    /*  */
+    /*  temporary */
     background-color: rgba(60, 60, 60, 0.4);
     
 }
 .dropdown-content.open{
     width: 50vw;
-
 }
 
 .dropdown-content a{
     visibility: hidden;
     opacity: 0;
     transition-duration: 0.3s;
-
 }
 .dropdown-content a.open{
     visibility: visible;
@@ -132,7 +130,27 @@ nav.open{
     nav a{
         display: block;
     }
-    
+    nav > a{
+        height: 100%;
+    }
+
+    .dropdown-content{
+        height: 0;
+        visibility: hidden;
+        pointer-events: none;
+        width: fit-content !important;
+        top: calc(var(--desktop-nav-height));
+        left: auto;
+        transition: height 0.5s;
+        
+        /*  temporary */
+        background-color: rgba(0, 0, 0, 1);
+        
+    }
+    .dropdown-content.open{
+        visibility: visible;
+        width: fit-content !important;
+    }
 
     .icon.menu{
         display: none;
