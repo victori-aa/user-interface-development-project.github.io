@@ -8,7 +8,9 @@
     --mobile-header-height: 4em;
     --desktop-header-height: 6em;
     --desktop-nav-height: 2em;
-}
+
+    --nav-num-elems: 5;
+}   
 
 body{
     margin: 0;
@@ -74,6 +76,7 @@ nav{
 }
 nav a{
     display: block;
+    white-space: nowrap;
 }
 nav.open{
     left: 0;
@@ -120,7 +123,7 @@ nav.open{
     nav{
         width: 100vw;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         color: white;
         left: 0;
         height: var(--desktop-nav-height);
@@ -129,6 +132,7 @@ nav.open{
     }
     nav a{
         display: block;
+        text-align: center;
     }
     nav > a{
         height: 100%;
@@ -138,18 +142,17 @@ nav.open{
         height: 0;
         visibility: hidden;
         pointer-events: none;
-        width: fit-content !important;
+        display: none;
+        width: calc(100vw/var(--nav-num-elems));
         top: calc(var(--desktop-nav-height));
         left: auto;
         transition: height 0.5s;
         
-        /*  temporary */
-        background-color: rgba(0, 0, 0, 1);
-        
     }
     .dropdown-content.open{
+        display: block;
         visibility: visible;
-        width: fit-content !important;
+
     }
 
     .icon.menu{

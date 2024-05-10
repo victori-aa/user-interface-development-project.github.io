@@ -4,9 +4,41 @@ let dropdowns = document.querySelectorAll(".dropdown");
 let dropdownMenus = document.querySelectorAll(".dropdown-content");
 let lock = 0;
 let dropdownEntered = 0;
+let maxNavSpread = 1000
+let navSections = navBar.children;
+
+if (window.innerWidth > 580){
+    adjustNavSectionSize();
+}
 
 
-//  creates an asynchronous sleep (NOT BUSY WAIT)
+
+
+function adjustNavSectionSize(){
+    //  calculate each header width
+    let width = maxNavSpread/navSections.length;
+
+    //  apply calculated width
+    let header;
+    for (let i = 0; i < navSections.length; i++){
+        if (navSections[i] instanceof HTMLDivElement){
+            header = navSections[i].firstElementChild;
+        }
+        else{
+            header = navSections[i];
+        } 
+        header.style.width = width + "px";
+    }
+
+    //  adjust width of dropdown menus
+    for (let i = 0; i < dropdownMenus.length; i++){
+        dropdownMenus[i].style.width = width + "px";
+    }
+
+}
+
+
+//  wrapper for asynchronous sleep
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -19,13 +51,24 @@ addEventListener("resize", async (event) => {
     await sleep(750);
     removeClass(navBar, "no-transition");
     
-    //  remove all injected style from dropdowns
+    //  remove all injected styling
     for (let i = 0; i < dropdowns.length; i++){
         dropdowns[i].removeAttribute("style")
-        menu = dropdowns[i].lastElementChild;
-        menu.removeAttribute("style")
+        dropdowns[i].firstElementChild.removeAttribute("style");
+        dropdowns[i].lastElementChild.removeAttribute("style");
+        
+    }
+    for (let i = 0; i < dropdownMenus.length; i++){
+        navSections[i].removeAttribute("style");
+    }
+
+    if (window.innerWidth > 750){
+        adjustNavSectionSize();
     }
 });
+
+
+
 
 //  open/close nav sidebar on menu button click
 menuBtn.addEventListener("click", function() {
@@ -57,7 +100,8 @@ for (let i = 0; i < dropdowns.length; i++){
     let content = dropdownMenu.children;
     dropdowns[i].addEventListener("mouseover", async function(){
         if (window.innerWidth > 580){
-            openDropdown(sectionName, dropdownMenu, content, 0)  
+            console.log("in: " + dropdowns[i])
+            openDropdown(dropdownMenu, content, 0)  
             dropdowns[i].style.height = (dropdowns[i].getAttribute("data-count") * content[0].offsetHeight + navBar.offsetHeight) + "px";
             dropdownMenu.style.height = dropdowns[i].getAttribute("data-count") * content[0].offsetHeight + "px";
         }
@@ -65,8 +109,8 @@ for (let i = 0; i < dropdowns.length; i++){
     });
     dropdowns[i].addEventListener("mouseleave", async function(){
         if (window.innerWidth > 580){
-            
-            closeDropdown(sectionName, dropdownMenu, content, 0)
+            console.log("out")
+            closeDropdown(dropdownMenu, content, 0)
 
             dropdowns[i].style.height = navBar.offsetHeight + "px";
             dropdownMenu.style.height = "0px";
@@ -75,9 +119,8 @@ for (let i = 0; i < dropdowns.length; i++){
 
 }
 
-async function openDropdown(sectionName, menu, content, delay){
-    
-    closeDropdowns([sectionName]);
+async function openDropdown(menu, content, delay){
+    console.log("opening : " + menu)
     addClass(menu, "open");
 
     lock = 1;
@@ -85,12 +128,10 @@ async function openDropdown(sectionName, menu, content, delay){
     lock = 0;
     
     addClassToArr(content, "open");
+    console.log("finish open")
 }
 
-async function closeDropdown(sectionName, menu, content, delay){
-    if (lock){
-        return 1;
-    }
+async function closeDropdown(menu, content, delay){
     removeClassFromArr(content, "open");
 
     lock = 1;
@@ -98,9 +139,6 @@ async function closeDropdown(sectionName, menu, content, delay){
     lock = 0;
     
     removeClass(menu, "open");
-
-    
-    closeDropdowns([sectionName]);
 }
 
 async function mobileDropdown(sectionName, dropdown, delay){
@@ -110,11 +148,13 @@ async function mobileDropdown(sectionName, dropdown, delay){
     if (window.innerWidth < 580){
         //  open the dropdown
         if (!lock && !dropdownMenu.classList.contains("open")){
-            openDropdown(sectionName, dropdownMenu, content, delay)
+            closeDropdowns();
+            openDropdown(dropdownMenu, content, delay)
         }
         //  close dropdown
         else if (!lock){
-            closeDropdown(sectionName, dropdownMenu, content, delay)
+            closeDropdown(dropdownMenu, content, delay)
+            closeDropdowns();
         }
     }
 }
