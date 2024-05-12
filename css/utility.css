@@ -1,3 +1,16 @@
+:root {
+    --gradient-pink: 228, 210, 216;
+    --gradient-purple: 166, 165, 196;
+    --frame-col: 42, 24, 37;
+    --nav-slide: 215, 191, 199;
+    --accent-col: 40, 41, 97;
+}
+
+::placeholder{
+    color: white;
+    font-size: 12px;
+}
+
 .flex-row{
     display: flex;
     flex-direction: row;

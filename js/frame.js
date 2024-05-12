@@ -100,8 +100,7 @@ for (let i = 0; i < dropdowns.length; i++){
     let content = dropdownMenu.children;
     dropdowns[i].addEventListener("mouseover", async function(){
         if (window.innerWidth > 580){
-            console.log("in: " + dropdowns[i])
-            openDropdown(dropdownMenu, content, 0)  
+            openDropdown(dropdownMenu, content, 200)  
             dropdowns[i].style.height = (dropdowns[i].getAttribute("data-count") * content[0].offsetHeight + navBar.offsetHeight) + "px";
             dropdownMenu.style.height = dropdowns[i].getAttribute("data-count") * content[0].offsetHeight + "px";
         }
@@ -109,8 +108,7 @@ for (let i = 0; i < dropdowns.length; i++){
     });
     dropdowns[i].addEventListener("mouseleave", async function(){
         if (window.innerWidth > 580){
-            console.log("out")
-            closeDropdown(dropdownMenu, content, 0)
+            closeDropdown(dropdownMenu, content, 200)
 
             dropdowns[i].style.height = navBar.offsetHeight + "px";
             dropdownMenu.style.height = "0px";
@@ -120,7 +118,6 @@ for (let i = 0; i < dropdowns.length; i++){
 }
 
 async function openDropdown(menu, content, delay){
-    console.log("opening : " + menu)
     addClass(menu, "open");
 
     lock = 1;
@@ -128,7 +125,6 @@ async function openDropdown(menu, content, delay){
     lock = 0;
     
     addClassToArr(content, "open");
-    console.log("finish open")
 }
 
 async function closeDropdown(menu, content, delay){
