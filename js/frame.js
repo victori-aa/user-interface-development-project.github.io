@@ -124,6 +124,10 @@ async function openDropdown(menu, content, delay){
     await sleep(delay);
     lock = 0;
     
+
+    if (!navBar.classList.contains("open")){
+        closeDropdown(menu, content, 0);
+    }
     addClassToArr(content, "open");
 }
 
@@ -134,7 +138,11 @@ async function closeDropdown(menu, content, delay){
     await sleep(delay);
     lock = 0;
     
+    if (!navBar.classList.contains("open")){
+        closeDropdown(menu, content, 0);
+    }
     removeClass(menu, "open");
+
 }
 
 async function mobileDropdown(sectionName, dropdown, delay){
