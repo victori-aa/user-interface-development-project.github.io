@@ -41,19 +41,25 @@ header > section{
 }
 
 header .search-bar{
-    height: fit-content;
+    height: 30px;
     align-items: center;
     border-radius: 5px;
 }
 header .search-bar input{
     display: none;
-    height: 30px;
+    height: 28px;
     border: 0px;
     width: 20vw;
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     background-color: rgba(0, 0, 0, 0);
     padding: 3px 0 0 0;
+    color: white;
+    outline: none;
 }
+header .search-bar :focus{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .company-name{
     text-wrap: nowrap; 
 }
@@ -68,7 +74,7 @@ nav{
 
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
-    transition: left 0.75s;
+    transition: left 0.7s;
 }
 nav a{
     display: block;
@@ -84,7 +90,7 @@ nav.open{
     width: 0;
     left: 50vw;
     bottom: 0;
-    transition: width 0.75s;
+    transition: width 0.7s;
 
     /*  temporary */
     background-color: rgba(60, 60, 60, 0.4);
@@ -97,7 +103,7 @@ nav.open{
 .dropdown-content a{
     visibility: hidden;
     opacity: 0;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }
 .dropdown-content a.open{
     visibility: visible;
@@ -143,13 +149,16 @@ nav.open{
         width: calc(100vw/var(--nav-num-elems));
         top: calc(var(--desktop-nav-height));
         left: auto;
-        transition: height 0.2s;
+        transition: height 0.3s;
         
     }
     .dropdown-content.open{
         display: block;
         visibility: visible;
 
+    }
+    .dropdown-content a{
+        transition-duration: 1s;
     }
 
     .icon.menu{
@@ -215,28 +224,28 @@ footer{
     display: flex;
     flex-direction: column;
     padding-top: 1em;
-    gap: 3.5em;
+    font-size: 16px;
+    font-weight: 600;
 }
-footer > *{
+footer > section{
     margin-inline: auto;
     width: 75vw;
+    padding-top: 3em;
 }
 .footer-nav{
     display: flex;
     flex-direction: column;
     padding-top: 1.2em;
     letter-spacing: 1px;
-    font-size: 16px;
-    font-weight: 600;
-    
 }
 .footer-nav > div{
     display: flex;
     margin-inline: auto;
     align-items: center;
     justify-content: space-between;
-    width: 75vw;
+    width: inherit;
     height: 2.75em;
+    max-width: inherit;
 }
 .footer-nav a{
     display: block;
@@ -247,14 +256,15 @@ footer .icon {
 }
 
 
+.newsletter {
+    margin-bottom: 3em;
+}
 .newsletter > p{
-    font-size: 16px;
-    font-weight: 600;
     margin-bottom: 1.2em;
     letter-spacing: 1px;
     margin: 0 0 15px 0;
 }
-footer .email-input{
+.newsletter .email-input{
     align-items: center;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -266,7 +276,7 @@ footer .email-input{
     line-height: 30px;
     border: solid 1px white;
 }
-footer .email-input input{
+.newsletter .email-input input{
     height: 30px;
     border: none;
     padding: 3px 0 0 0;
@@ -274,7 +284,11 @@ footer .email-input input{
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0);
     text-indent: 10px;
-    color: white
+    color: white;
+    outline: none;
+}
+.newsletter .email-input :focus{
+    background-color: rgba(255, 255, 255, 0.2);
 }
 #email-submit{
     background-color: white;
@@ -295,9 +309,11 @@ footer .email-input input{
 }
 .privacy-policy label{
     font-size: 12px;
+    font-weight: 400;
     display: block;
     text-align: left;
     width: fit-content;
+
 }
 .privacy-policy a{
     color: gold;
@@ -305,7 +321,7 @@ footer .email-input input{
 
 .socials{
     justify-content: center;
-    gap: 2em;
+    gap: 2.8em;
 }
 .socials img{
     height: 28px;
@@ -313,12 +329,59 @@ footer .email-input input{
 }
 
 .attribution{
+    font-weight: 400;
     font-size: 10px;
-    width: fit-content;
+    text-align: center;
 }
 
 @media (min-width:580px) { 
-    /* .footer-nav > div{
-        font-size: 32px;
-    } */
+    footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 24px;
+        justify-content: center;
+        column-gap: 15vw;
+        margin-inline: auto;
+        width: 80vw;
+        max-width: 1200px;
+        padding-top: 1.8em;
+    }
+    footer > section{
+        width: 35vw;
+        max-width: 400px;
+        margin: 0;
+        padding-top: 0 !important;
+    }
+    .footer-nav div{
+        height: 2.2em;
+    }
+
+    .newsletter {
+        margin-bottom: 3em;
+    }
+    .newsletter p{
+        line-height: 2.2em;
+    }
+    .newsletter .email-input{
+        width: 35vw;
+        max-width: 400px;
+    }
+    .privacy-policy label{
+        font-size: 16px;
+    }
+
+    .socials{
+        justify-content: space-around;
+    }
+    .socials img{
+        height: 38px;
+        width: auto;
+    }
+
+    .attribution{
+        padding-top: 2em;
+        font-size: 14px;
+    }
+
+
 }

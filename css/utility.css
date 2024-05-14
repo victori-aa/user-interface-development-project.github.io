@@ -10,6 +10,9 @@
     color: white;
     font-size: 12px;
 }
+input:focus::placeholder {
+    color: transparent;
+}
 
 .flex-row{
     display: flex;

@@ -12,8 +12,6 @@ if (window.innerWidth > 580){
 }
 
 
-
-
 function adjustNavSectionSize(){
     //  calculate each header width
     let width = maxNavSpread/navSections.length;
@@ -67,7 +65,23 @@ addEventListener("resize", async (event) => {
     }
 });
 
-
+//  prevent the header from overlapping the footer
+addEventListener('scroll', function() {
+    let header = document.querySelector('header');
+    let footer = document.querySelector('footer');
+    
+    let headerRect = header.getBoundingClientRect();
+    let footerRect = footer.getBoundingClientRect();
+    let navRect = navBar.getBoundingClientRect();
+    
+    if ((window.innerWidth < 580 && headerRect.height >= footerRect.top)
+        || (window.innerWidth > 580 && headerRect.height + navRect.height >= footerRect.top)) {
+        header.style.opacity = "0"
+    } 
+    else {
+        header.removeAttribute("style")
+    }
+});
 
 
 //  open/close nav sidebar on menu button click
@@ -100,7 +114,7 @@ for (let i = 0; i < dropdowns.length; i++){
     let content = dropdownMenu.children;
     dropdowns[i].addEventListener("mouseover", async function(){
         if (window.innerWidth > 580){
-            openDropdown(dropdownMenu, content, 200)  
+            openDropdown(dropdownMenu, content, 0)  
             dropdowns[i].style.height = (dropdowns[i].getAttribute("data-count") * content[0].offsetHeight + navBar.offsetHeight) + "px";
             dropdownMenu.style.height = dropdowns[i].getAttribute("data-count") * content[0].offsetHeight + "px";
         }
@@ -108,7 +122,7 @@ for (let i = 0; i < dropdowns.length; i++){
     });
     dropdowns[i].addEventListener("mouseleave", async function(){
         if (window.innerWidth > 580){
-            closeDropdown(dropdownMenu, content, 200)
+            closeDropdown(dropdownMenu, content, 0)
 
             dropdowns[i].style.height = navBar.offsetHeight + "px";
             dropdownMenu.style.height = "0px";
