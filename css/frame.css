@@ -40,20 +40,19 @@ header > section{
     gap: 3vw;
 }
 
-.search-bar{
+header .search-bar{
     height: fit-content;
     align-items: center;
     border-radius: 5px;
 }
-.search-bar form{
+header .search-bar input{
     display: none;
-}
-.search-bar input{
     height: 30px;
     border: 0px;
     width: 20vw;
-    /* invisible bg */
+    border-radius: 5px;
     background-color: rgba(0, 0, 0, 0);
+    padding: 3px 0 0 0;
 }
 .company-name{
     text-wrap: nowrap; 
@@ -156,20 +155,17 @@ nav.open{
     .icon.menu{
         display: none;
     }
-    .search-bar{
+    header .search-bar{
         background-color: rgba(255, 255, 255, 0.2);
     }
     .header-controls{
         gap: 3vw;
     }
-    .search-bar form{
-        display: inline;
-        
-    }
-    .search-bar input{
+    header .search-bar input{
+        display: block;
         padding-left: 0.8em;
     }
-    .search-bar div{
+    header .search-bar div{
         background-color: white;
         border-radius: 0 5px 5px 0;
         width: 40px;
@@ -197,11 +193,8 @@ main::before{
 
 }
 main{
-
     background: linear-gradient(rgb(var(--gradient-pink)), rgb(var(--gradient-purple)));
     background-repeat: no-repeat;
-
-    /* temp: */
     min-height: 100vh; 
     height: fit-content;
 
@@ -219,16 +212,113 @@ main{
 footer{
     color: white;
     background-color: rgba(var(--frame-col), 0.6);
-
-    /* temp to remove whitespace: */
+    display: flex;
+    flex-direction: column;
     padding-top: 1em;
-    padding-bottom: 1em;
+    gap: 3.5em;
+}
+footer > *{
+    margin-inline: auto;
+    width: 75vw;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.2em;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 600;
+    
 }
 .footer-nav > div{
     display: flex;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 75vw;
+    height: 2.75em;
+}
+.footer-nav a{
+    display: block;
 }
 footer .icon {
-    width: 30px;
-    height: 30px;
+    width: auto;
+    height: 20px;
 }
 
+
+.newsletter > p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1.2em;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+}
+footer .email-input{
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    justify-content: space-between;
+    width: 75vw;
+    margin-bottom: 0.8em;
+    
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px white;
+}
+footer .email-input input{
+    height: 30px;
+    border: none;
+    padding: 3px 0 0 0;
+    width: 55vw;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    text-indent: 10px;
+    color: white
+}
+#email-submit{
+    background-color: white;
+    width: 20vw;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+#email-submit a{
+    color: rgb(var(--frame-col))
+}
+.privacy-policy{
+    gap: 0.5em;
+}
+.privacy-policy input{
+    width: 20px;
+    height: 20px;
+}
+.privacy-policy label{
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    width: fit-content;
+}
+.privacy-policy a{
+    color: gold;
+}
+
+.socials{
+    justify-content: center;
+    gap: 2em;
+}
+.socials img{
+    height: 28px;
+    width: auto;
+}
+
+.attribution{
+    font-size: 10px;
+    width: fit-content;
+}
+
+@media (min-width:580px) { 
+    /* .footer-nav > div{
+        font-size: 32px;
+    } */
+}
