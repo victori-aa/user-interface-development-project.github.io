@@ -267,6 +267,7 @@ main::before{
     background-color: rgba(var(--frame-col), 0.6);
     
     height: var(--mobile-header-height);
+    top: 0;
 
 }
 main{
@@ -274,8 +275,10 @@ main{
     background-repeat: no-repeat;
     min-height: 100vh; 
     height: fit-content;
+    padding-top: var(--mobile-header-height)
 
 }
+
 
 @media (min-width:580px) { 
     main::before{
