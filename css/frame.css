@@ -32,33 +32,69 @@ header > section{
 }
 .icon.bag{
     width: auto;
-    height: 33px;
-    margin-top: -5px;
+    height: 30px;
 }
 
 .header-controls{
     gap: 3vw;
 }
 
-header .search-bar{
+#search-bar{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 30px;
+    right: 0;
+}
+
+
+#search-bar button{
+    position: absolute;
+    right: 0;
+    top: calc(var(--mobile-header-height) + 12px);
+    width: 15vw;
+    right: 5vw;
     height: 30px;
-    align-items: center;
-    border-radius: 5px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    outline-color: white;
+    outline-style: solid;
+    padding: 0;
+    color: rgba(var(--frame-col));
+
+    outline-width: 1px;
+    height: 30px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    
 }
-header .search-bar input{
-    display: none;
-    height: 28px;
-    border: 0px;
-    width: 20vw;
-    border-radius: 5px 0 0 5px;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 3px 0 0 0;
-    color: white;
+#search-bar input{
+    position: absolute;
+    top: calc(var(--mobile-header-height) + 12px);
+    width: 75vw;
+    left: 5vw;
+    padding: 0;
     outline: none;
+    border: none;
+    background-color: rgba(var(--frame-col), 0.4);
+    border-radius: 5px 0 0 5px;
+    text-indent: 0.7em;
+    outline-color: white;
+    outline-style: solid;
+
+    height: 30px;
+    outline-width: 1px;
+    opacity: 0;
+    transition: opacity 0.2s;
 }
-header .search-bar :focus{
-    background-color: rgba(255, 255, 255, 0.2);
+#search-bar input.open, #search-bar button.open{
+    opacity: 1 !important;
 }
+
+
+#search-bar :focus{
+    background-color: rgba(var(--frame-col), 0.2);
+}
+
 
 .company-name{
     text-wrap: nowrap; 
@@ -164,20 +200,52 @@ nav.open{
     .icon.menu{
         display: none;
     }
-    header .search-bar{
+    #search-bar{
         background-color: rgba(255, 255, 255, 0.2);
+        height: 30px;
+        align-items: center;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        width: auto
+        
     }
+    
+    #search-bar input{
+        position: relative;
+        display: none;
+        height: 28px;
+        border: 0px;
+        width: 20vw;
+        border-radius: 5px 0 0 5px;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 3px 0 0 0;
+        color: white;
+        outline: none;
+        opacity: 1;
+        left: auto;
+        top: auto;    
+        text-indent: 0;
+
+    }
+
     .header-controls{
         gap: 3vw;
     }
-    header .search-bar input{
+    #search-bar input{
         display: block;
         padding-left: 0.8em;
     }
-    header .search-bar div{
+    #search-bar div{
         background-color: white;
         border-radius: 0 5px 5px 0;
         width: 40px;
+    }
+    #search-bar :focus{
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    #search-bar button{
+        display: none;
     }
     .icon.search{
         width: 22px !important;
@@ -294,12 +362,17 @@ footer .icon {
     background-color: white;
     width: 20vw;
     text-align: center;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(var(--frame-col));
+    border-radius: 0 5px 5px 0;
+    height: 30px;
+	border: solid 1px white;
+	cursor: pointer;
+    padding: 0;
 }
-#email-submit a{
-    color: rgb(var(--frame-col))
-}
+
+
 .privacy-policy{
     gap: 0.5em;
 }
@@ -340,7 +413,7 @@ footer .icon {
         flex-wrap: wrap;
         font-size: 24px;
         justify-content: center;
-        column-gap: 15vw;
+        column-gap: 12vw;
         margin-inline: auto;
         width: 80vw;
         max-width: 1200px;
@@ -348,7 +421,7 @@ footer .icon {
     }
     footer > section{
         width: 35vw;
-        max-width: 400px;
+        max-width: 380px;
         margin: 0;
         padding-top: 0 !important;
     }
@@ -364,7 +437,7 @@ footer .icon {
     }
     .newsletter .email-input{
         width: 35vw;
-        max-width: 400px;
+        max-width: 380px;
     }
     .privacy-policy label{
         font-size: 16px;

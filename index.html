@@ -19,13 +19,14 @@
                 <img id="menu-btn" class="icon menu" src="icons/menu-icon.svg" alt="hamburger menu icon"> 
                 <h1 class="company-name">GD Games</h1>
                 <div class="flex-row header-controls">
-                    <div class="search-bar flex-row">
+                    <div id="search-bar" class="flex-row">
                         <input class="oxanium-font" type="text" name="search" placeholder="Search">
-                        <div>
+                        <div class="search-submit" onclick="searchIconClicked();">
                             <picture>
                                 <source media="(min-width:580px)" srcset="icons/search-dark.svg">
                                 <img class="icon search" src="icons/search-light.svg" alt="search icon"> 
                             </picture>
+                            <button class="oxanium-font" type="button">Go</button> 
                         </div>
                     </div>                
                     <img class="icon bag" src="icons/shopping-bag.svg" alt="shopping cart icon"> 
@@ -102,9 +103,7 @@
                     <p class="oxanium-font">Stay in the Loop</p>
                     <div class="email-input flex-row">
                         <input class="oxanium-font" type="text" name="email" placeholder="Email">
-                        <div id="email-submit">
-                            <a class="outfit-font">Submit</a>
-                        </div>
+                        <button id="email-submit" type="button" class="outfit-font">Submit</button>
                     </div>
                     <div class="privacy-policy flex-row">
                         <input type="checkbox" id="privacy" name="privacy">

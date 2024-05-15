@@ -1,3 +1,4 @@
+//  navigation bar
 let menuBtn = document.getElementById("menu-btn");
 let navBar = document.querySelector("nav");
 let dropdowns = document.querySelectorAll(".dropdown");
@@ -6,6 +7,15 @@ let lock = 0;
 let dropdownEntered = 0;
 let maxNavSpread = 1000
 let navSections = navBar.children;
+
+//  search bar
+let searchBar = document.getElementById("search-bar");
+let searchInput = searchBar.querySelector("input")
+let searchSubmit = searchBar.querySelector(".search-submit");
+let searchIcon = searchSubmit.querySelector("picture");
+let searchButton = searchSubmit.querySelector("button");
+
+
 
 if (window.innerWidth > 580){
     adjustNavSectionSize();
@@ -73,8 +83,9 @@ addEventListener('scroll', function() {
     let headerRect = header.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
     let navRect = navBar.getBoundingClientRect();
+    let searchRect = searchInput.getBoundingClientRect();
     
-    if ((window.innerWidth < 580 && headerRect.height >= footerRect.top)
+    if ((window.innerWidth < 580 && headerRect.height >= footerRect.top - searchRect.height)
         || (window.innerWidth > 580 && headerRect.height + navRect.height >= footerRect.top)) {
         header.style.opacity = "0"
     } 
@@ -230,4 +241,13 @@ function addClass(elem, className){
 
 function removeClass(elem, className){
     elem.classList.remove(className);
+}
+
+
+function searchIconClicked(){
+    //  mobile resolution
+    if (window.innerWidth < 580){
+        searchButton.classList.toggle("open");
+        searchInput.classList.toggle("open");
+    }
 }
