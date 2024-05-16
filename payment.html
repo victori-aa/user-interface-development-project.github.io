@@ -10,11 +10,106 @@
         <title>Checkout</title>
 
         <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/utility.css">
         <link rel="stylesheet" href="css/typography.css">
     </head>
     <body>
-        
+        <header>
 
+        </header>
+        <main>
+            <section>
+                <div>
+                    <h2>Express Checkout</h2>
+                    <button type="button">
+                        <img src="icons/pay-shop-pay.svg" alt="pay with Shop Pay">
+                    </button>
+                    <button type="button">
+                        <img src="icons/pay-google.svg" alt="pay with Google Pay">
+                    </button>
+                    <button type="button">
+                        <img src="icons/pay-paypal.svg" alt="pay with PayPal">
+                    </button>
+                </div>
+
+                <div>
+                    <span>OR</span>
+                </div>
+
+                <form>
+                    <div>
+                        <div>
+                            <h2>Personal Details</h2>
+                            <a>Log In</a>   
+                        </div>
+                        <div>
+                            <input type="text" name="email" placeholder="Email">
+    
+                            <input type="checkbox" name="email-me">
+                            <label for="email-me">Email me with news and offers</label>    
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Delivery</h2>
+                        <div>
+                            <div>
+                                <input type="text" name="country" placeholder="Country / Region">
+                                <img class="icon search" src="../icons/caret-down.svg" alt="arrow facing downwards"> 
+                            </div>
+                            <input type="text" name="first-name" placeholder="First Name">
+                            <input type="text" name="last-name" placeholder="Last Name">
+                            <div>
+                                <input type="text" name="address" placeholder="Address">
+                                <a>+ Add apartment, suite, etc.</a>
+                            </div>
+                            <input type="text" name="city" placeholder="City">
+                            <input type="text" name="state" placeholder="State / Territory">
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Shipping Method</h2>
+                        <div>
+                            <p>Enter your shipping address to view available shipping methods</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Payment</h2>
+                        <div>
+                            <p>All transactions are secure and encrypted.</p>
+                            <div>
+                                <div>
+                                    <input type="radio" name="payment-method" value="credit-card">
+                                    <label for="credit-card">Credit Card</label>
+                                    <div>
+                                        <!-- card logos -->
+                                    </div>
+                                </div>
+                                <div>    
+                                    <input type="text" name="card-num" placeholder="Card Number">
+                                    <div>
+                                        <input type="text" name="card-date" placeholder="Expiration Date (MM/YY)">
+                                        <input type="text" name="card-code" placeholder="Security Code">  
+                                    </div>
+                                    <input type="text" name="card-name" placeholder="Name on Card"> 
+
+                                    <input type="checkbox" name="use-shipping-address">
+                                    <label for="use-shipping-address">Use shipping address as billing address</label> 
+                                </div>
+                                <input type="radio" name="payment-method" value="paypal">
+                                <label for="credit-card">PayPal</label>
+
+                                
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section>
+
+            </section>
+        </main>
 
 
         
