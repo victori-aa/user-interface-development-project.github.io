@@ -78,7 +78,7 @@
                             <p>All transactions are secure and encrypted.</p>
                             <div>
                                 <div>
-                                    <input type="radio" name="payment-method" value="credit-card">
+                                    <input type="radio" name="payment-method" id="credit-card">
                                     <label for="credit-card">Credit Card</label>
                                     <div>
                                         <!-- card logos -->
@@ -95,19 +95,82 @@
                                     <input type="checkbox" name="use-shipping-address">
                                     <label for="use-shipping-address">Use shipping address as billing address</label> 
                                 </div>
-                                <input type="radio" name="payment-method" value="paypal">
-                                <label for="credit-card">PayPal</label>
-
-                                
-
                             </div>
-                            
+                            <div>
+                                <input type="radio" name="payment-method" id="paypal">
+                                <label for="paypal">PayPal</label>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Remember Me</h3>
+                            <input type="checkbox" name="remember-me">
+                            <label for="remember-me">Save my information for a faster checkout</label> 
                         </div>
                     </div>
                 </form>
             </section>
             <section>
-
+                <div>
+                    <h2>Order Summary</h2>
+                    <div>
+                        <picture>
+                            <img src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
+                        </picture>
+                        <div>
+                            <div>
+                                <h2>What the Golf?</h2>
+                                <h3>(Nintendo Switch Physical Edition)</h3>
+                            </div>
+                            <div>
+                                <div>
+                                    <button type="button">-</button>
+                                    <p>1</p>
+                                    <button type="button">+</button>
+                                </div>
+                                <p>$79.99 AUD</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div>
+                        <picture>
+                            <img src="images/products/absolute-drift.png" alt="cover of Absolute Drift Premium Edition">
+                        </picture>
+                        <div>
+                            <div>
+                                <h2>Absolute Drift</h2>
+                                <h3>(Nintendo Switch Premium Edition)</h3>
+                            </div>
+                            <div>
+                                <div>
+                                    <button type="button">-</button>
+                                    <p>1</p>
+                                    <button type="button">+</button>
+                                </div>
+                                <p>$59.99 AUD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="text" name="discount-code" placeholder="Discount Code">
+                            <button type="button">Apply</button>
+                        </div>
+                        <div>
+                            <p>Subtotal</p>
+                            <p>$139.98</p>
+                        </div>
+                        <div>
+                            <p>Shipping</p>
+                            <p>$7.95</p>
+                        </div>
+                        <div>
+                            <p>Total</p>
+                            <p>$147.93</p>
+                        </div>
+                    </div>
+                </div>
+                <button type="button">Pay Now</button>
+                
             </section>
         </main>
 
