@@ -1,8 +1,82 @@
-body {
-    color: #282961;
+.wide-center {
+    width: 90vw;
+    margin-inline: auto;
+
 }
 
-.products {
+.layer-imgs{
+    height: 90vw;
+}
+.layer-imgs img{
+    width: auto;
+    height: 90vw;
+    display: block;
+    position: absolute;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel{
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.product-card{
+    width: 70vw;
+    text-align: center;
+
+    
+    
+
+}
+.tile-bg{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    border: solid 1px white;
+}
+
+.product-card img{
+    width: 35vw;
+}
+
+.grid{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.consoles img{
+    width: 40vw;
+}
+
+.blog-post{
+    width: 90vw;
+    justify-content: space-around;
+}
+.blog-post img{
+    width: 40vw;
+}
+.blog-post > div{
+    width: 40vw;
+}
+ 
+
+
+
+
+
+ /* .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -10,20 +84,20 @@ body {
 }
 
 .product-box {
-    width: calc(50% - 20px); /* Set width to 50% of the container width minus padding */
+    width: calc(50% - 20px);
     max-width: 300px;
     height: auto;
     margin-top: 2em;
     padding-top: 1em;
     text-align: center;
-    /*glassmorphism effect*/
+
     background: rgba(255, 255, 255, 0.2);
     border-radius: 24px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0);
-    /*glassmorphism effect*/
+
 }
 
 h1 {
@@ -48,14 +122,13 @@ h3 {
 }
 
 @media (min-width:580px) { 
-    /* tablets */ 
 
     .products {
         padding: 2em;
     }
 
     .product-box {
-        width: calc(33.33% - 2em); /* Set width to one-third of the container width minus padding for large desktop */
+        width: calc(33.33% - 2em);
         margin-top: 2em;
         padding-top: 1em;    
     }
@@ -74,14 +147,13 @@ h3 {
 }
 
 @media (min-width:1024px) { 
-    /* big landscape tablets, laptops, and desktops */ 
 
     .products {
         padding: 4em;
     }
 
     .product-box {
-        width: calc(25% - 4em); /* Set width to one-third of the container width minus padding for large desktop */
+        width: calc(25% - 4em);
         margin-top: 4em;
     }
 
@@ -96,4 +168,4 @@ h3 {
     h3 {
         font-size: 18px;
     }
-}
+}  */

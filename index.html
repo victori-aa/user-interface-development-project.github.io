@@ -10,6 +10,7 @@
         <title>Home</title>
 
         <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/utility.css">
         <link rel="stylesheet" href="css/typography.css">
     </head>
@@ -70,11 +71,10 @@
             </nav>
             
         </header>
-        
         <main>
-            <section class="landing">
+            <section class="wide-center">
                 <h1>PLAY MORE,</h1>
-                <div>
+                <div class="layer-imgs">
                     <picture>
                         <img src="images/illustrations/synthwave-sun.png" alt="illustration of a sun">
                     </picture>
@@ -85,10 +85,10 @@
                 <h1>PAY LESS</h1>
             </section>
             
-            <section class="carousel">
-                <h2>New Arrivals</h2>
-                <div>
-                    <div>
+            <section>
+                <h2 class="wide-center">New Arrivals</h2>
+                <div class="flex-row carousel">
+                    <div class="product-card tile-bg">
                         <picture>
                             <img src="images/products/absolute-drift.png" alt="cover of Absolute Drift Premium Edition">
                         </picture>
@@ -96,7 +96,7 @@
                         <h4>(Nintendo Switch Premium Edition)</h4>
                         <p>$59.99 AUD</p>
                     </div>
-                    <div>
+                    <div class="product-card tile-bg">
                         <picture>
                             <img src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
                         </picture>
@@ -104,7 +104,7 @@
                         <h4>(Nintendo Switch Physical Edition)</h4>
                         <p>$79.99 AUD</p>
                     </div>
-                    <div>
+                    <div class="product-card tile-bg">
                         <picture>
                             <img src="images/products/manifold-garden.png" alt="cover of Manifold Garden Physical Edition">
                         </picture>
@@ -115,40 +115,40 @@
                 </div>
             </section>
 
-            <section class="consoles">
+            <section class="wide-center">
                 <h2>Game Console</h2>
-                <div>
+                <div class="flex-row grid consoles">
                     <div>
                         <picture>
-                            <img src="images/console-switch.png" alt="Nintendo Switch illustration">
+                            <img class="tile-bg" src="images/console-switch.png" alt="Nintendo Switch illustration">
                         </picture>
                         <h3>Nintendo Switch</h3>
                     </div>
                     <div>
                         <picture>
-                            <img src="images/console-playstation.png" alt="Playstation controller illustration">
+                            <img class="tile-bg" src="images/console-playstation.png" alt="Playstation controller illustration">
                         </picture>
                         <h3>PlayStation</h3>
                     </div>
                     <div>
                         <picture>
-                            <img src="images/console-xbox.png" alt="Xbox controller illustration">
+                            <img class="tile-bg" src="images/console-xbox.png" alt="Xbox controller illustration">
                         </picture>
-                        <h3>Xbox/h3>
+                        <h3>Xbox
                     </div>
                     <div>
                         <picture>
-                            <img src="images/console-pc-mac-yellow.png" alt="computer illustration">
+                            <img class="tile-bg" src="images/console-pc-mac-yellow.png" alt="computer illustration">
                         </picture>
                         <h3>PC/Mac</h3>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section class="wide-center">
                 <h2>GD Blog</h2>
-                <div>
-                    <div>
+                <div class="flex-col">
+                    <div class="flex-row blog-post tile-bg">
                         <picture>
                             <img src="images/thumbnails/disney-lorcana.png" alt="Disney Lorcana, trading card game">
                         </picture>
@@ -159,7 +159,7 @@
                             </p>
                         </div>
                     </div>
-                    <div>
+                    <div class="flex-row blog-post tile-bg">
                         <picture>
                             <img src="images/thumbnails/final-fantasy.png" alt="Final Fantasy 7 Remake">
                         </picture>
@@ -170,7 +170,7 @@
                             </p>
                         </div>
                     </div>
-                    <div>
+                    <div class="flex-row blog-post tile-bg">
                         <picture>
                             <img src="images/thumbnails/assassins-creed.png" alt="Assassin's Creed Rogue Remastered">
                         </picture>
@@ -184,12 +184,12 @@
                 </div>
             </section>
 
-            <section>
+            <section class="wide-center">
                 <h2>Reviews</h2>
                 <div>
-                    <div>
+                    <div class="flex-row tile-bg">
                         <picture>
-                            <img src="images/reviewers/avatar-one.png" alt="reviewer's profile picture">
+                            <img class="tile-bg" src="images/reviewers/avatar-one.png" alt="reviewer's profile picture">
                         </picture>
                         <div>
                             <h3>Mark A.</h3>
@@ -198,9 +198,9 @@
                             </p>
                         </div>
                     </div>
-                    <div>
+                    <div class="flex-row tile-bg">
                         <picture>
-                            <img src="images/reviewers/avatar-two.png" alt="reviewer's profile picture">
+                            <img class="tile-bg" src="images/reviewers/avatar-two.png" alt="reviewer's profile picture">
                         </picture>
                         <div>
                             <h3>Sarah B.</h3>
@@ -209,9 +209,9 @@
                             </p>
                         </div>
                     </div>
-                    <div>
+                    <div class="flex-row tile-bg">
                         <picture>
-                            <img src="images/reviewers/avatar-three.png" alt="reviewer's profile picture">
+                            <img class="tile-bg" src="images/reviewers/avatar-three.png" alt="reviewer's profile picture">
                         </picture>
                         <div>
                             <h3>Raj C.</h3>
@@ -222,8 +222,6 @@
                     </div>
                 </div>
             </section>
-
-
         </main>
 
         <footer>

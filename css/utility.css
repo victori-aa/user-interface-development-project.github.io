@@ -14,12 +14,6 @@ input:focus::placeholder {
     color: transparent;
 }
 
-.flex-row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .no-transition{
     transition: none !important;
 }
