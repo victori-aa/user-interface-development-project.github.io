@@ -71,7 +71,25 @@
     width: 40vw;
 }
  
+.icon{
+    width: 30px;
+}
 
+#filter-desktop{
+    display: none;
+}
+
+.products{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.products div{
+    width: 40vw;
+}
+.products img{
+    width: 20vw;
+}
 
 
 
