@@ -35,10 +35,6 @@
 .product-card{
     width: 70vw;
     text-align: center;
-
-    
-    
-
 }
 .tile-bg{
     background: rgba(255, 255, 255, 0.2);
@@ -77,6 +73,10 @@
 
 #filter-desktop{
     display: none;
+}
+
+#filter-mobile{
+    justify-content: space-between;
 }
 
 .products{
