@@ -10,13 +10,14 @@
         <title>Absolute Drift</title>
 
         <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/utility.css">
         <link rel="stylesheet" href="css/typography.css">
     </head>
     <header>
 
     </header>
-    <main>
+    <!-- <main>
         <section>
             <img src="images/products/absolute-drift.png" alt="cover of Absolute Drift Premium Edition">
             </picture>
@@ -83,5 +84,190 @@
     </main>
     <footer>
 
-    </footer>
+    </footer> -->
+
+    <body>
+        <header>
+            <section class="flex-row"> 
+                <img id="menu-btn" class="icon menu" src="icons/menu-icon.svg" alt="hamburger menu icon"> 
+                <h1 class="company-name">GD Games</h1>
+                <div class="flex-row header-controls">
+                    <div id="search-bar" class="flex-row">
+                        <input class="oxanium-font" type="text" name="search" placeholder="Search">
+                        <div class="search-submit" onclick="searchIconClicked();">
+                            <picture>
+                                <source media="(min-width:580px)" srcset="icons/search-dark.svg">
+                                <img class="icon search" src="icons/search-light.svg" alt="search icon"> 
+                            </picture>
+                            <button class="oxanium-font" type="button">Go</button> 
+                        </div>
+                    </div>                
+                    <img class="icon bag" src="icons/shopping-bag.svg" alt="shopping cart icon"> 
+                </div>
+            </section>
+            <nav>
+                <a class="oxanium-font">Shop</a>
+
+                <a class="oxanium-font">GD Blog</a>
+
+                <div class="dropdown">
+                    <a class="oxanium-font">Game Franchises</a>
+                    <div class="dropdown-content">
+                        <a class="sudo-var-font">Animal Crossing</a>
+                        <a class="sudo-var-font">Call of Duty</a>
+                        <a class="sudo-var-font">Final Fantasy</a>
+                        <a class="sudo-var-font">Grand Theft Auto</a>
+                        <a class="sudo-var-font">Halo</a>
+                        <a class="sudo-var-font">Pokémon</a>
+                        <a class="sudo-var-font">Super Mario</a>
+                        <a class="sudo-var-font">Legend of Zelda</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="oxanium-font">Consoles</a>
+                    <div class="dropdown-content">
+                        <a class="sudo-var-font">Atari</a>
+                        <a class="sudo-var-font">Dreamcast</a>
+                        <a class="sudo-var-font">PC / Mac Gaming</a>
+                        <a class="sudo-var-font">PlayStation 3</a>
+                        <a class="sudo-var-font">PlayStation 4</a>
+                        <a class="sudo-var-font">PlayStation 5</a>
+                        <a class="sudo-var-font">Nintendo Switch</a>
+                        <a class="sudo-var-font">Xbox</a>
+                        <a class="sudo-var-font">All Collections</a>
+                    </div>
+                </div>
+                
+                <a class="oxanium-font">About Us</a>
+            </nav>
+        </header>
+        <main>
+            <section class="wide-center product-card">
+                <a>&lt;&nbsp;&nbsp;&nbsp;Back to Browsing</a>
+                <div class="tile-bg">
+                    <img src="images/products/absolute-drift.png" alt="cover of Absolute Drift Premium Edition">
+                </div>
+                
+                <div>
+                    <div>
+                        <h1>Absolute Drift</h1>
+                        <h2>(Nintendo Switch Premium Edition)</h2>
+                        <h3>$59.99 AUD</h3>
+                    </div>
+                    <button>Add to Cart</button>
+                    <div class="flex-row space-content">
+                        <p>In Stock</p>
+                        <p>Add to Wishlist</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wide-center">
+                <div>
+                    <p><b>Drifting: the Art Of Sliding Sideways.</b></p>
+                    <p>This is a driving experience like no other. Journey from apprentice to master drifter as you hone your skill in a gorgeous minimalist world crafted by the developers of art of rally.Push yourself to the limit on drifting tracks and wild mountain roads while you work to unlock trophies and elite events. Compete against ghosts of the top players in the world, or refine your skills by out-scoring your own ghost.Chill out to over 3 hours of original electronic music by C41 and NYTE as you challenge your driving skills at every turn until you finally master the art of drifting.</p>
+                    <ul>
+                        <li>Drive and customize up to 6 drift cars.</li>
+                        <li>3 Game Modes: Driftkhana, Drifting, & Mountain Drifting with 34 levels.</li>
+                        <li>5 Free-Roaming areas, each with unique levels and themes, from airports and docks to a floating metropolis.</li>
+                        <li>Online Leaderboards, replays and ghost cars. View your friends' runs or the best in the world!</li>
+                        <li>3+ hours of clean Drum & Bass and Electronic music by C41 and Nyte.</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+            <section class="wide-center">
+                <h2>More Like This</h2>
+                <div class="flex-row carousel">
+                    <div class="product-card">
+                        <div class="tile-bg">
+                            <img src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
+                        </div>
+                        <h3>What the Golf?</h3>
+                        <h4>(Nintendo Switch Physical Edition)</h4>
+                        <p>$79.99 AUD</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="tile-bg">
+                            <img src="images/products/manifold-garden.png" alt="cover of Manifold Garden">
+                        </div>
+                        <h3>Manifold Garden</h3>
+                        <h4>(Nintendo Switch Physical Edition)</h3>
+                        <p>$69.99 AUD</p>
+                    </div>  
+                    <div class="product-card">
+                        <div class="tile-bg">
+                            <img src="images/products/etherborn.png"alt="cover of Etherborn">
+                        </div>
+                        <h3>Etherborn</h3>
+                        <h4>(Nintendo Switch Physical Edition)</h4>
+                        <p>$59.99 AUD</p>
+                    </div> 
+                </div>
+            </section>
+
+        </main>
+        
+        <footer>
+            <section class="footer-nav">
+                <div>
+                    <a class="oxanium-font">About Us</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Delivery</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Returns</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Refund Policy</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Secure Checkout</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Terms of Service</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+            </section>
+            
+            <section>
+                <div class="newsletter">
+                    <p class="oxanium-font">Stay in the Loop</p>
+                    <div class="email-input flex-row">
+                        <input class="oxanium-font" type="text" name="email" placeholder="Email">
+                        <button id="email-submit" type="button" class="outfit-font">Submit</button>
+                    </div>
+                    <div class="privacy-policy flex-row">
+                        <input type="checkbox" id="privacy" name="privacy">
+                        <label class="sudo-var-font" for="privacy"> I agree to subscribe to updates from GD&nbspGames. <a href="#">Privacy&nbspPolicy</a></label>    
+                    </div>
+                </div>
+                
+                <div class="socials flex-row">
+                    <img class="icon" src="icons/phone.png" alt="arrow facing right">
+                    <img class="icon" src="icons/mail.png" alt="arrow facing right">
+                    <img class="icon" src="icons/instagram.png" alt="arrow facing right">
+                    <img class="icon" src="icons/facebook.png" alt="arrow facing right">
+                </div>
+            </section>
+
+            <section>
+                <div class="attribution">
+                    <p class="oxanium-font">© 2024 GD Games</p>
+                </div>
+            </section>
+            
+        </footer>
+
+        <script src="js/frame.js"></script>
+    </body>
 </html>

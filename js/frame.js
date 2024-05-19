@@ -83,14 +83,16 @@ addEventListener('scroll', function() {
     let headerRect = header.getBoundingClientRect();
     let footerRect = footer.getBoundingClientRect();
     let navRect = navBar.getBoundingClientRect();
-    let searchRect = searchInput.getBoundingClientRect();
     
-    if ((window.innerWidth < 580 && headerRect.height >= footerRect.top - searchRect.height)
+    //  hide header
+    if ((window.innerWidth < 580 && headerRect.height >= footerRect.top)
         || (window.innerWidth > 580 && headerRect.height + navRect.height >= footerRect.top)) {
-        header.style.opacity = "0"
+        
+        header.style.opacity = "0";
+        closeSearchBar();
     } 
     else {
-        header.removeAttribute("style")
+        header.removeAttribute("style");
     }
 });
 
@@ -98,14 +100,17 @@ addEventListener('scroll', function() {
 //  open/close nav sidebar on menu button click
 menuBtn.addEventListener("click", function() {
     if (!navBar.classList.contains("open")){
-        addClass(navBar, "open");
+        openNavBar();
     }
     else{
         closeNavMenu();
     }
 }); 
 
-
+function openNavBar(){
+    closeSearchBar();
+    addClass(navBar, "open");
+}
 
 //  behaviour of dropdown menus at different resolutions
 for (let i = 0; i < dropdowns.length; i++){
@@ -247,7 +252,15 @@ function removeClass(elem, className){
 function searchIconClicked(){
     //  mobile resolution
     if (window.innerWidth < 580){
-        searchButton.classList.toggle("open");
-        searchInput.classList.toggle("open");
+        toggleMobileNav();
     }
+}
+
+function toggleMobileNav(){
+    searchButton.classList.toggle("open");
+    searchInput.classList.toggle("open");
+}
+function closeSearchBar(){
+    searchButton.classList.remove("open");
+    searchInput.classList.remove("open");
 }

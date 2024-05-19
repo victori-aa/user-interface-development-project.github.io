@@ -79,6 +79,10 @@
     justify-content: space-between;
 }
 
+.space-content{
+    justify-content: space-between;
+}
+
 .products{
     justify-content: space-between;
     flex-wrap: wrap;
@@ -90,6 +94,7 @@
 .products img{
     width: 20vw;
 }
+
 
 
 
