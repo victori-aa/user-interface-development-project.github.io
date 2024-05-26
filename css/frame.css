@@ -16,7 +16,7 @@ body{
 header{
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 header > section{
     width: 100vw;
@@ -273,7 +273,7 @@ main::before{
 main{
     background: linear-gradient(rgb(var(--gradient-pink)), rgb(var(--gradient-purple)));
     background-repeat: no-repeat;
-    min-height: 100vh; 
+    min-height: calc(100vh - var(--mobile-header-height)); 
     height: fit-content;
     padding-top: var(--mobile-header-height)
 
@@ -284,7 +284,9 @@ main{
     main::before{
         content:"";
         height: calc(var(--desktop-header-height) + var(--desktop-nav-height));
- 
+    }
+    main{
+        min-height: calc(100vh - var(--desktop-header-height)); 
     }
 }
 

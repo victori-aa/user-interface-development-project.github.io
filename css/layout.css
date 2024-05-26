@@ -47,6 +47,13 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 24px;
     border: solid 1px white;
+    backdrop-filter: blur(10px);
+}
+
+.white-tile-bg{
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: solid 1px white;
 }
 
 .product-card img{
@@ -102,6 +109,39 @@
     width: 20vw;
 }
 
+.cart-product{
+    position: relative;
+    padding: 1em;
+    gap: 1em;
+    margin-bottom: 1em;
+    z-index: 1;
+}
+.cart-product > div{
+    width: 50vw;
+    height: 50%;
+}
+.cart-product img{
+    width: 20vw;
+}
+
+.cart-product h2, .cart-product h3{
+    margin: 0;
+}
+
+.small-inline-sp{
+    padding-inline: 2em;
+}
+
+.bold-button{
+    height: 4em;
+    border-radius: 12px;
+    margin-block: 1em;
+}
+
+.bg-img{
+    z-index: 0;
+    position: absolute;
+}
 
 
 
