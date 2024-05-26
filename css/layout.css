@@ -1,3 +1,10 @@
+:root {
+    --mobile-header-height: 4em;
+} 
+.company-logo{
+    height: calc(var(--mobile-header-height)/3)
+}
+
 .wide-center {
     width: 90vw;
     margin-inline: auto;
