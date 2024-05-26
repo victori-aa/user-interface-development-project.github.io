@@ -131,6 +131,14 @@
 .small-inline-sp{
     padding-inline: 2em;
 }
+.med-inline-sp{
+    padding-inline: 4em;
+}
+
+.med-inline-margin{
+    margin-inline: auto;
+    width: 90%;
+}
 
 .bold-button{
     height: 4em;
@@ -141,10 +149,59 @@
 .bg-img{
     z-index: 0;
     position: absolute;
+    scale: 0.75;
+    margin-top: 8px;
 }
 
+.express-checkout {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.express-checkout button {
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+}
+.express-checkout img {
+    height: 20px;
+}
+.express-checkout button{
+    border-radius: 4px;
+}
+.express-checkout button:nth-child(1){
+    width: 100%;
+}
+.express-checkout button:nth-child(2), .express-checkout button:nth-child(3){
+    width: 49%;
+    margin-top: 5px;
+}
 
+form ::placeholder{
+    color: black;
+}
+.icon.card{
+    border-radius: 6px;
+    border: solid white 1px;
+    background-color: white;
+}
 
+form.payment input[type=text], form.payment select{
+    width: 85vw;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#payment-divider{
+    text-align: center;
+}
+#payment-divider span{
+    backdrop-filter: blur(30px);
+    padding-inline: 1em
+}
+#payment-divider hr{
+    transform: translateY(18px);
+    color: rgb(var(--accent-col));
+}
 
  /* .products {
     display: flex;

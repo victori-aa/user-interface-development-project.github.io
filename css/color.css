@@ -1,0 +1,17 @@
+:root {
+    --gradient-pink: 228, 210, 216;
+    --gradient-purple: 166, 165, 196;
+    --frame-col: 42, 24, 37;
+    --nav-slide: 215, 191, 199;
+    --accent-col: 40, 41, 97;
+}
+
+#shop-pay{
+    background-color: #5A31F4;
+}
+#google-pay{
+    background-color: #000000;
+}
+#paypal-pay{
+    background-color: #FFC43A;
+}

@@ -10,8 +10,10 @@
         <title>Checkout</title>
 
         <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/utility.css">
         <link rel="stylesheet" href="css/typography.css">
+        <link rel="stylesheet" href="css/color.css">
     </head>
     <body>
         <header>
@@ -71,57 +73,67 @@
             
         </header>
         <main>
-            <section>
+            <section class="wide-center">
                 <div>
                     <h2>Express Checkout</h2>
-                    <button type="button">
-                        <img src="icons/pay-shop-pay.svg" alt="pay with Shop Pay">
-                    </button>
-                    <button type="button">
-                        <img src="icons/pay-google.svg" alt="pay with Google Pay">
-                    </button>
-                    <button type="button">
-                        <img src="icons/pay-paypal.svg" alt="pay with PayPal">
-                    </button>
+                    <div class="express-checkout flex-row med-inline-margin">
+                        <button id="shop-pay" type="button">
+                            <img src="icons/pay-shop-pay.svg" alt="pay with Shop Pay">
+                        </button>
+                        <button id="google-pay" type="button">
+                            <img src="icons/pay-google.svg" alt="pay with Google Pay">
+                        </button>
+                        <button id="paypal-pay" type="button">
+                            <img src="icons/pay-paypal.svg" alt="pay with PayPal">
+                        </button>
+                    </div> 
                 </div>
 
-                <div>
+                <div id="payment-divider">
+                    <hr>
                     <span>OR</span>
                 </div>
 
-                <form>
+                <form class="payment">
                     <div>
-                        <div>
+                        <div class="flex-row space-content">
                             <h2>Personal Details</h2>
                             <a>Log In</a>   
                         </div>
-                        <div>
-                            <input type="text" name="email" placeholder="Email">
-    
-                            <input type="checkbox" name="email-me">
-                            <label for="email-me">Email me with news and offers</label>    
+                        <div class="flex-col">
+                            <input type="text" name="email" placeholder="Email or Phone">
+                            <div class="flex-row">
+                                <input type="checkbox" name="email-me">
+                                <label for="email-me">Email me with news and offers</label>        
+                            </div>
                         </div>
                     </div>
                     <div>
                         <h2>Delivery</h2>
-                        <div>
-                            <div>
-                                <input type="text" name="country" placeholder="Country / Region">
-                                <img class="icon search" src="../icons/caret-down.svg" alt="arrow facing downwards"> 
-                            </div>
+                        <div class="flex-col">
                             <input type="text" name="first-name" placeholder="First Name">
                             <input type="text" name="last-name" placeholder="Last Name">
-                            <div>
+                            <div class="flex-col">
                                 <input type="text" name="address" placeholder="Address">
                                 <a>+ Add apartment, suite, etc.</a>
                             </div>
-                            <input type="text" name="city" placeholder="City">
-                            <input type="text" name="state" placeholder="State / Territory">
+                            <input type="text" name="city" placeholder="City / Region">
+                            <select name="state" id="states">
+                                <option value="nsw" selected>New South Wales</option>
+                                <option value="vic">Victoria</option>
+                                <option value="qld">Queensland</option>
+                                <option value="wa">Western Australia</option>
+                                <option value="sa">South Australia</option>
+                                <option value="tas">Tasmania</option>
+                            </select>
+                            <select name="country" id="countries">
+                                <option value="aus" selected>Australia</option>
+                            </select>
                         </div>
                     </div>
                     <div>
                         <h2>Shipping Method</h2>
-                        <div>
+                        <div class="white-tile-bg">
                             <p>Enter your shipping address to view available shipping methods</p>
                         </div>
                     </div>
@@ -130,100 +142,102 @@
                         <div>
                             <p>All transactions are secure and encrypted.</p>
                             <div>
-                                <div>
-                                    <input type="radio" name="payment-method" id="credit-card">
-                                    <label for="credit-card">Credit Card</label>
+                                <div class="flex-row space-content white-tile-bg">
                                     <div>
-                                        <!-- card logos -->
+                                        <input type="radio" name="payment-method" id="credit-card" checked>
+                                        <label for="credit-card">Credit Card</label>
+                                    </div>
+                                    <div class="flex-row">
+                                        <img class="icon card" src="icons/visa.svg" alt="Accepts Visa card">
+                                        <img class="icon card" src="icons/amex.svg" alt="Accepts Amercan Express card">
+                                        <img class="icon card" src="icons/mastercard.svg" alt="Accepts Mastercard">
+                                        <div class="icon card">+2</div>
                                     </div>
                                 </div>
-                                <div>    
-                                    <input type="text" name="card-num" placeholder="Card Number">
+                                <div class="flex-col">    
+                                    <input class="tile-bg" type="text" name="card-num" placeholder="Card Number">
+                                    <input class="tile-bg" type="text" name="card-date" placeholder="Expiration Date (MM/YY)">
+                                    <input class="tile-bg" type="text" name="card-code" placeholder="Security Code">  
+                                    <input class="tile-bg" type="text" name="card-name" placeholder="Name on Card"> 
                                     <div>
-                                        <input type="text" name="card-date" placeholder="Expiration Date (MM/YY)">
-                                        <input type="text" name="card-code" placeholder="Security Code">  
+                                        <input type="checkbox" name="use-shipping-address" checked>
+                                        <label for="use-shipping-address">Use shipping address as billing address</label>     
                                     </div>
-                                    <input type="text" name="card-name" placeholder="Name on Card"> 
-
-                                    <input type="checkbox" name="use-shipping-address">
-                                    <label for="use-shipping-address">Use shipping address as billing address</label> 
                                 </div>
                             </div>
-                            <div>
+                            <div class="tile-bg">
                                 <input type="radio" name="payment-method" id="paypal">
                                 <label for="paypal">PayPal</label>
                             </div>
                         </div>
                         <div>
                             <h3>Remember Me</h3>
-                            <input type="checkbox" name="remember-me">
-                            <label for="remember-me">Save my information for a faster checkout</label> 
+                            <div>
+                                <input type="checkbox" name="remember-me">
+                                <label for="remember-me">Save my information for a faster checkout</label>     
+                            </div>
                         </div>
                     </div>
                 </form>
             </section>
-            <section>
+            <section class="wide-center">
                 <div>
                     <h2>Order Summary</h2>
                     <div>
-                        <picture>
+                        <div class="flex-row tile-bg cart-product">
                             <img src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
-                        </picture>
-                        <div>
                             <div>
                                 <h2>What the Golf?</h2>
                                 <h3>(Nintendo Switch Physical Edition)</h3>
-                            </div>
-                            <div>
-                                <div>
-                                    <button type="button">-</button>
-                                    <p>1</p>
-                                    <button type="button">+</button>
+                                <div class="flex-row space-content">
+                                    <div class="flex-row">
+                                        <button type="button">-</button>
+                                        <p>1</p>
+                                        <button type="button">+</button>
+                                    </div>
+                                    <p>$79.99 AUD</p> 
                                 </div>
-                                <p>$79.99 AUD</p>
                             </div>
                         </div>
-                    </div> 
-                    <div>
-                        <picture>
+                        <div class="flex-row tile-bg cart-product">
                             <img src="images/products/absolute-drift.png" alt="cover of Absolute Drift Premium Edition">
-                        </picture>
-                        <div>
                             <div>
                                 <h2>Absolute Drift</h2>
                                 <h3>(Nintendo Switch Premium Edition)</h3>
-                            </div>
-                            <div>
-                                <div>
-                                    <button type="button">-</button>
-                                    <p>1</p>
-                                    <button type="button">+</button>
+                                <div class="flex-row space-content">
+                                    <div class="flex-row">
+                                        <button type="button">-</button>
+                                        <p>1</p>
+                                        <button type="button">+</button>
+                                    </div>
+                                    <p>$59.99 AUD</p>
                                 </div>
-                                <p>$59.99 AUD</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div>
+                        <div class="tile-bg space-content flex-row">
                             <input type="text" name="discount-code" placeholder="Discount Code">
                             <button type="button">Apply</button>
                         </div>
-                        <div>
-                            <p>Subtotal</p>
-                            <p>$139.98</p>
+                        <div class="tile-bg">
+                            <div class="flex-row space-content med-inline-margin">
+                                <p>Subtotal</p>
+                                <p>$139.98</p>
+                            </div>
+                            <div class="flex-row space-content med-inline-margin">
+                                <p>Shipping</p>
+                                <p>$7.95</p>
+                            </div>
+                            <div class="flex-row space-content med-inline-margin">
+                                <p><b>Total</b></p>
+                                <p><b>$147.93</b></p>
+                            </div>
                         </div>
-                        <div>
-                            <p>Shipping</p>
-                            <p>$7.95</p>
-                        </div>
-                        <div>
-                            <p>Total</p>
-                            <p>$147.93</p>
-                        </div>
+                        
                     </div>
                 </div>
-                <button type="button">Pay Now</button>
-                
+                <button class="bold-button wide-center" type="button">Pay Now</button>
             </section>
         </main>
 
