@@ -275,7 +275,7 @@ main{
     background-repeat: no-repeat;
     min-height: calc(100vh - var(--mobile-header-height)); 
     height: fit-content;
-    padding-top: var(--mobile-header-height)
+    padding-top: var(--mobile-header-height);
 
 }
 
@@ -296,7 +296,7 @@ footer{
     background-color: rgba(var(--frame-col), 0.6);
     display: flex;
     flex-direction: column;
-    padding-top: 1em;
+    margin-top: 1em;
     font-size: 16px;
     font-weight: 600;
 }
@@ -327,6 +327,7 @@ footer .icon {
     width: auto;
     height: 20px;
 }
+
 
 
 .newsletter {

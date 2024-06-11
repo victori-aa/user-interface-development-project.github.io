@@ -139,6 +139,18 @@
     margin-inline: auto;
     width: 90%;
 }
+.large-inline-margin{
+    margin-inline: auto;
+    width: 75%;
+}
+
+.med-bot-margin{
+    margin-bottom: 20px;
+}
+
+.cost-divider{
+    width: 85%
+}
 
 .bold-button{
     height: 4em;

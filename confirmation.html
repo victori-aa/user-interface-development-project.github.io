@@ -10,8 +10,10 @@
         <title>Confirmation</title>
 
         <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/utility.css">
         <link rel="stylesheet" href="css/typography.css">
+        <link rel="stylesheet" href="css/color.css">
     </head>
     <body>  
         <header>
@@ -71,49 +73,113 @@
             
         </header>
         <main>
-            <section>
+            <section class="wide-center">
                 <div>
                     <h1>Thank You!</h1>
                     <h2>Your Order Has Been Received.</h2>
                 </div>
-                <picture>
-                    <img src="images/illustrations/icon-giftbox.png" alt="gift box with a ribbon">
-                </picture>
+                <img class="wide-center" src="images/illustrations/icon-giftbox.png" alt="gift box with a ribbon">
             </section>
-            <section>
-                <div>
-                    <h2>Order Summary</h2>
-                    <div>
-                        <h3>What the Golf?</h3>
-                        <p>$79.99</p>
-                        <p>(Nintendo Switch Physical Edition)</p>
-                        <p>x1</p>
+            <section class="wide-center">
+                <div class="white-tile-bg med-bot-margin">
+                    <h2 class="med-inline-margin">Order Summary</h2>
+                    <div class="large-inline-margin">
+                        <div class="flex-row space-content">
+                            <h3>What the Golf?</h3>
+                            <p>$79.99</p>
+                        </div>
+                        <div class="flex-row space-content">
+                            <p>(Nintendo Switch Physical Edition)</p>
+                            <p>x1</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Absolute Drift</h3>
-                        <p>$59.99</p>
-                        <p>(Nintendo Switch Premium Edition)</p>
-                        <p>x1</p>
+                    <div class="large-inline-margin">
+                        <div class="flex-row space-content">
+                            <h3>Absolute Drift</h3>
+                            <p>$59.99</p>
+                        </div>
+                        <div class="flex-row space-content">
+                            <p>(Nintendo Switch Premium Edition)</p>
+                            <p>x1</p>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div class="white-tile-bg">
+                    <div class="flex-row space-content med-inline-margin">
                         <p>Subtotal</p>
                         <p>$139.98</p>
                     </div>
-                    <div>
+                    <div class="flex-row space-content med-inline-margin">
                         <p>Shipping</p>
                         <p>$7.95</p>
                     </div>
-                    <div>
-                        <p>Total</p>
-                        <p>$147.93</p>
+                    <hr class="cost-divider">
+                    <div class="flex-row space-content med-inline-margin">
+                        <p><b>Total</b></p>
+                        <p><b>$147.93</b></p>
                     </div>
                 </div>
             </section>
+            <br>
         </main>
         <footer>
-
+            <section class="footer-nav">
+                <div>
+                    <a class="oxanium-font">About Us</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Delivery</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Returns</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Refund Policy</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Secure Checkout</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+                <div>
+                    <a class="oxanium-font">Terms of Service</a>
+                    <img class="icon" src="icons/caret-right.svg" alt="arrow facing right"> 
+                </div>
+            </section>
+            
+            <section>
+                <div class="newsletter">
+                    <p class="oxanium-font">Stay in the Loop</p>
+                    <div class="email-input flex-row">
+                        <input class="oxanium-font" type="text" name="email" placeholder="Email">
+                        <button id="email-submit" type="button" class="outfit-font">Submit</button>
+                    </div>
+                    <div class="privacy-policy flex-row">
+                        <input type="checkbox" id="privacy" name="privacy">
+                        <label class="sudo-var-font" for="privacy"> I agree to subscribe to updates from GD&nbspGames. <a href="#">Privacy&nbspPolicy</a></label>    
+                    </div>
+                </div>
+                
+                <div class="socials flex-row">
+                    <img class="icon" src="icons/phone.png" alt="arrow facing right">
+                    <img class="icon" src="icons/mail.png" alt="arrow facing right">
+                    <img class="icon" src="icons/instagram.png" alt="arrow facing right">
+                    <img class="icon" src="icons/facebook.png" alt="arrow facing right">
+                </div>
+            </section>
+    
+            <section>
+                <div class="attribution">
+                    <p class="oxanium-font">© 2024 GD Games</p>
+                </div>
+            </section>
+            
         </footer>
+    
+        <script src="js/frame.js"></script>
     </body>
+    
 </html>
