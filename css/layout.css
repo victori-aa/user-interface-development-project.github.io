@@ -45,7 +45,7 @@
 }
 .tile-bg{
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 24px;
+    border-radius: 10px;
     border: solid 1px white;
     backdrop-filter: blur(10px);
 }
@@ -144,6 +144,9 @@
     height: 4em;
     border-radius: 12px;
     margin-block: 1em;
+    color: white;
+    background-color: rgb(var(--accent-col));
+    border: none;
 }
 
 .bg-img{
@@ -158,6 +161,9 @@
     justify-content: space-between;
 }
 .express-checkout button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     border: none;
     border-radius: 4px;
@@ -185,11 +191,35 @@ form ::placeholder{
     background-color: white;
 }
 
+
 form.payment input[type=text], form.payment select{
     width: 85vw;
-    margin: 0 !important;
+    margin: 10px 0 0 0 !important;
     padding: 0 !important;
+    height: 30px;
+    
 }
+form.payment input[type=text]{
+    text-indent: 0.5em;
+}
+
+form.payment input[type=radio], form.payment input[type=radio] + label{
+    height: 40px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+form.payment select{
+    text-indent: 0.25em;  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: ''; 
+}
+form.payment input[type=checkbox], form.payment input[type=checkbox] + label{
+    margin-bottom: 20px;
+}
+
+
+
 
 #payment-divider{
     text-align: center;
@@ -201,6 +231,38 @@ form.payment input[type=text], form.payment select{
 #payment-divider hr{
     transform: translateY(18px);
     color: rgb(var(--accent-col));
+}
+
+.split-input{
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+.split-input input::placeholder{
+    color: black;
+}
+.split-input input{
+    height: inherit;
+    border-radius: inherit;
+}
+.split-input :nth-child(1){
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    text-indent: 1em;
+}
+.split-input :nth-child(2){
+    width: 30%;
+    height: inherit;
+    background-color: rgba(var(--accent-col), 0.5);
+    border: none;
+    border-radius: inherit;
+    color: white;
+}   
+
+.info-field{
+    height: 30px;
+    text-indent: 1em;
 }
 
  /* .products {

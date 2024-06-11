@@ -101,7 +101,7 @@
                             <a>Log In</a>   
                         </div>
                         <div class="flex-col">
-                            <input type="text" name="email" placeholder="Email or Phone">
+                            <input type="text" class="tile-bg" name="email" placeholder="Email or Phone">
                             <div class="flex-row">
                                 <input type="checkbox" id="email-me" name="email-me">
                                 <label for="email-me">Email me with news and offers</label>        
@@ -111,22 +111,23 @@
                     <div>
                         <h2>Delivery</h2>
                         <div class="flex-col">
-                            <input type="text" name="first-name" placeholder="First Name">
-                            <input type="text" name="last-name" placeholder="Last Name">
+                            <input type="text" class="tile-bg" name="first-name" placeholder="First Name">
+                            <input type="text" class="tile-bg" name="last-name" placeholder="Last Name">
                             <div class="flex-col">
-                                <input type="text" name="address" placeholder="Address">
+                                <input type="text" class="tile-bg" name="address" placeholder="Address">
                                 <a>+ Add apartment, suite, etc.</a>
                             </div>
-                            <input type="text" name="city" placeholder="City / Region">
-                            <select name="state" id="states">
-                                <option value="nsw" selected>New South Wales</option>
+                            <input type="text" class="tile-bg" name="city" placeholder="City / Region">
+                            <select class="tile-bg" name="state" id="states">
+                                <option value="default" selected>State / Territory</option>
+                                <option value="nsw">New South Wales</option>
                                 <option value="vic">Victoria</option>
                                 <option value="qld">Queensland</option>
                                 <option value="wa">Western Australia</option>
                                 <option value="sa">South Australia</option>
                                 <option value="tas">Tasmania</option>
                             </select>
-                            <select name="country" id="countries">
+                            <select class="tile-bg" name="country" id="countries">
                                 <option value="aus" selected>Australia</option>
                             </select>
                         </div>
@@ -215,11 +216,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tile-bg space-content flex-row split-input">
+                        <input type="text" name="discount-code" placeholder="Discount Code">
+                        <button type="button">Apply</button>
+                    </div>
                     <div>
-                        <div class="tile-bg space-content flex-row">
-                            <input type="text" name="discount-code" placeholder="Discount Code">
-                            <button type="button">Apply</button>
-                        </div>
                         <div class="tile-bg">
                             <div class="flex-row space-content med-inline-margin">
                                 <p>Subtotal</p>
