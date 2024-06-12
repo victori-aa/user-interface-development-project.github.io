@@ -29,34 +29,40 @@
 
 main {
   color: #282961;
+  font-size: 4px;
 }
 
 .landing-page {
   font-family: "Press Start 2P", system-ui;
+  font-size:12em;
   font-weight: 400;
   font-style: normal;
 }
 
 .section-heading {
   font-family: "Press Start 2P", system-ui;
+  font-size:6em;
   font-weight: 400;
   font-style: normal;
 }
 
 .title {
   font-family: "Oxanium", sans-serif;
+  font-size:5em;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 .subtitle {
   font-family: "Oxanium", sans-serif;
+  font-size:4em;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 .price {
   font-family: 'Sudo Var', sans-serif;
+  font-size:5em;
   font-optical-sizing: auto;
   font-style: normal;
 }
