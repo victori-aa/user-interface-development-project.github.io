@@ -75,7 +75,7 @@
         <main>
             <section class="wide-center">
                 <div>
-                    <h2>Express Checkout</h2>
+                    <h2 class="subheading">Express Checkout</h2>
                     <div class="express-checkout flex-row med-inline-margin">
                         <button id="shop-pay" type="button">
                             <img src="icons/pay-shop-pay.svg" alt="pay with Shop Pay">
@@ -91,34 +91,34 @@
 
                 <div id="payment-divider">
                     <hr>
-                    <span>OR</span>
+                    <span class="subtitle">OR</span>
                 </div>
 
                 <form class="payment">
                     <div>
                         <div class="flex-row space-content">
-                            <h2>Personal Details</h2>
+                            <h2 class="subheading">Personal Details</h2>
                             <a>Log In</a>   
                         </div>
                         <div class="flex-col">
-                            <input type="text" class="tile-bg" name="email" placeholder="Email or Phone">
+                            <input type="text" class="tile-bg form-input" name="email" placeholder="Email or Phone">
                             <div class="flex-row">
                                 <input type="checkbox" id="email-me" name="email-me">
-                                <label for="email-me">Email me with news and offers</label>        
+                                <label for="email-me" class="form-input">Email me with news and offers</label>        
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h2>Delivery</h2>
+                        <h2 class="subheading">Delivery</h2>
                         <div class="flex-col">
-                            <input type="text" class="tile-bg" name="first-name" placeholder="First Name">
-                            <input type="text" class="tile-bg" name="last-name" placeholder="Last Name">
+                            <input type="text" class="tile-bg form-input" name="first-name" placeholder="First Name">
+                            <input type="text" class="tile-bg form-input" name="last-name" placeholder="Last Name">
                             <div class="flex-col">
-                                <input type="text" class="tile-bg" name="address" placeholder="Address">
-                                <a>+ Add apartment, suite, etc.</a>
+                                <input type="text" type="text" class="tile-bg form-input" name="address" placeholder="Address">
+                                <a class="form-input">+ Add apartment, suite, etc.</a>
                             </div>
-                            <input type="text" class="tile-bg" name="city" placeholder="City / Region">
-                            <select class="tile-bg" name="state" id="states">
+                            <input type="text" type="text" class="tile-bg form-input" name="city" placeholder="City / Region">
+                            <select class="tile-bg form-input" name="state" id="states">
                                 <option value="default" selected>State / Territory</option>
                                 <option value="nsw">New South Wales</option>
                                 <option value="vic">Victoria</option>
@@ -127,26 +127,26 @@
                                 <option value="sa">South Australia</option>
                                 <option value="tas">Tasmania</option>
                             </select>
-                            <select class="tile-bg" name="country" id="countries">
+                            <select class="tile-bg form-input" name="country" id="countries">
                                 <option value="aus" selected>Australia</option>
                             </select>
                         </div>
                     </div>
                     <div>
-                        <h2>Shipping Method</h2>
+                        <h2 class="subheading">Shipping Method</h2>
                         <div class="white-tile-bg">
-                            <p>Enter your shipping address to view available shipping methods</p>
+                            <p class="form-input">Enter your shipping address to view available shipping methods</p>
                         </div>
                     </div>
                     <div>
-                        <h2>Payment</h2>
+                        <h2 class="subheading">Payment</h2>
                         <div>
-                            <p>All transactions are secure and encrypted.</p>
+                            <p class="subtitle">All transactions are secure and encrypted.</p>
                             <div>
                                 <div class="flex-row space-content white-tile-bg">
                                     <div>
                                         <input type="radio" name="payment-method" id="credit-card" checked>
-                                        <label for="credit-card">Credit Card</label>
+                                        <label for="credit-card" class="form-input">Credit Card</label>
                                     </div>
                                     <div class="flex-row">
                                         <img class="icon card" src="icons/visa.svg" alt="Accepts Visa card">
@@ -156,26 +156,26 @@
                                     </div>
                                 </div>
                                 <div class="flex-col">    
-                                    <input class="tile-bg" type="text" name="card-num" placeholder="Card Number">
-                                    <input class="tile-bg" type="text" name="card-date" placeholder="Expiration Date (MM/YY)">
-                                    <input class="tile-bg" type="text" name="card-code" placeholder="Security Code">  
-                                    <input class="tile-bg" type="text" name="card-name" placeholder="Name on Card"> 
+                                    <input class="tile-bg form-input" type="text" name="card-num" placeholder="Card Number">
+                                    <input class="tile-bg form-input" type="text" name="card-date" placeholder="Expiration Date (MM/YY)">
+                                    <input class="tile-bg form-input" type="text" name="card-code" placeholder="Security Code">  
+                                    <input class="tile-bg form-input" type="text" name="card-name" placeholder="Name on Card"> 
                                     <div>
                                         <input type="checkbox" name="use-shipping-address" id="use-shipping-address" checked>
-                                        <label for="use-shipping-address">Use shipping address as billing address</label>     
+                                        <label for="use-shipping-address" class="form-input">Use shipping address as billing address</label>     
                                     </div>
                                 </div>
                             </div>
                             <div class="tile-bg">
                                 <input type="radio" name="payment-method" id="paypal">
-                                <label for="paypal">PayPal</label>
+                                <label for="paypal" class="form-input">PayPal</label>
                             </div>
                         </div>
                         <div>
-                            <h3>Remember Me</h3>
+                            <h3 class="subtitle">Remember Me</h3>
                             <div>
                                 <input type="checkbox" name="remember-me" id="remember-me">
-                                <label for="remember-me">Save my information for a faster checkout</label>     
+                                <label for="remember-me" class="form-input">Save my information for a faster checkout</label>     
                             </div>
                         </div>
                     </div>
@@ -183,57 +183,57 @@
             </section>
             <section class="wide-center">
                 <div>
-                    <h2>Order Summary</h2>
+                    <h2 class="subheading">Order Summary</h2>
                     <div>
                         <div class="flex-row tile-bg cart-product">
                             <img src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
                             <div>
-                                <h2>What the Golf?</h2>
-                                <h3>(Nintendo Switch Physical Edition)</h3>
+                                <h2 class="title">What the Golf?</h2>
+                                <h3 class="subtitle">(Nintendo Switch Physical Edition)</h3>
                                 <div class="flex-row space-content">
                                     <div class="flex-row">
                                         <button type="button">-</button>
-                                        <p>1</p>
+                                        <p class="product-quantity">1</p>
                                         <button type="button">+</button>
                                     </div>
-                                    <p>$79.99 AUD</p> 
+                                    <p class="price">$79.99 AUD</p> 
                                 </div>
                             </div>
                         </div>
                         <div class="flex-row tile-bg cart-product">
                             <img src="images/products/absolute-drift.png" alt="cover of Absolute Drift Premium Edition">
                             <div>
-                                <h2>Absolute Drift</h2>
-                                <h3>(Nintendo Switch Premium Edition)</h3>
+                                <h2 class="title">Absolute Drift</h2>
+                                <h3 class="subtitle">(Nintendo Switch Premium Edition)</h3>
                                 <div class="flex-row space-content">
                                     <div class="flex-row">
                                         <button type="button">-</button>
-                                        <p>1</p>
+                                        <p class="product-quantity">1</p>
                                         <button type="button">+</button>
                                     </div>
-                                    <p>$59.99 AUD</p>
+                                    <p class="price">$59.99 AUD</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tile-bg space-content flex-row split-input">
-                        <input type="text" name="discount-code" placeholder="Discount Code">
-                        <button type="button">Apply</button>
+                        <input class="form-input" type="text" name="discount-code" placeholder="Discount Code">
+                        <button class="small-button" type="button">Apply</button>
                     </div>
                     <div>
                         <div class="tile-bg">
                             <div class="flex-row space-content med-inline-margin">
-                                <p>Subtotal</p>
-                                <p>$139.98</p>
+                                <p class="subtitle">Subtotal</p>
+                                <p class="price">$139.98</p>
                             </div>
                             <div class="flex-row space-content med-inline-margin">
-                                <p>Shipping</p>
-                                <p>$7.95</p>
+                                <p class="subtitle">Shipping</p>
+                                <p class="price">$7.95</p>
                             </div>
                             <hr class="cost-divider">
                             <div class="flex-row space-content med-inline-margin">
-                                <p><b>Total</b></p>
-                                <p><b>$147.93</b></p>
+                                <p class="subtitle"><b>Total</b></p>
+                                <p class="price"><b>$147.93</b></p>
                             </div>
                         </div>
                         

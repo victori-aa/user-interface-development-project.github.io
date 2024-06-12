@@ -46,6 +46,13 @@ main {
   font-style: normal;
 }
 
+.subheading {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 3em;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .title {
   font-family: "Oxanium", sans-serif;
   font-size: 5em;
@@ -95,6 +102,13 @@ main {
   font-style: normal;
 }
 
+.small-button {
+  font-family: "Oxanium", sans-serif;
+  font-size: 4em;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .product-tag {
   font-family: 'Sudo Var', sans-serif;
   font-size: 6em;
@@ -107,5 +121,23 @@ main {
   font-size: 4em;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.form-input {
+  font-family: "Oxanium", sans-serif;
+  font-size: 3em;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  opacity: 0.5;
+  color: #282961;
+}
+
+input::placeholder {
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: bold;
+  color: #282961;
 }
 
