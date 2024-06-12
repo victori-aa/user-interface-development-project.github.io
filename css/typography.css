@@ -15,7 +15,6 @@
   font-style: normal;
 }
 
-
 .press-start-2p-regular {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
@@ -24,6 +23,40 @@
   
 .outfit-font {
   font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  color: #282961;
+}
+
+.landing-page {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.section-heading {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title {
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.subtitle {
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.price {
+  font-family: 'Sudo Var', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
