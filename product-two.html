@@ -19,23 +19,23 @@
         <header>
             <section class="flex-row"> 
                 <img id="menu-btn" class="icon menu" src="icons/menu-icon.svg" alt="hamburger menu icon"> 
-                <img class="company-logo" src="logo/GD-Games-Logo.png" alt="GD Games">
+                <img class="company-logo clickable" src="logo/GD-Games-Logo.png" alt="GD Games">
                 <div class="flex-row header-controls">
                     <div id="search-bar" class="flex-row">
                         <input class="oxanium-font" type="text" name="search" placeholder="Search">
                         <div class="search-submit" onclick="searchIconClicked();">
                             <picture>
                                 <source media="(min-width:580px)" srcset="icons/search-dark.svg">
-                                <img class="icon search" src="icons/search-light.svg" alt="search icon"> 
+                                <img class="icon search clickable" src="icons/search-light.svg" alt="search icon"> 
                             </picture>
                             <button class="oxanium-font" type="button">Go</button> 
                         </div>
                     </div>                
-                    <img class="icon bag" src="icons/shopping-bag.svg" alt="shopping cart icon"> 
+                    <img class="icon bag clickable" src="icons/shopping-bag.svg" alt="shopping cart icon"> 
                 </div>
             </section>
             <nav>
-                <a class="oxanium-font">Shop</a>
+                <a class="oxanium-font clickable">Shop</a>
 
                 <a class="oxanium-font">GD Blog</a>
 
@@ -62,7 +62,7 @@
                         <a class="sudo-var-font">PlayStation 3</a>
                         <a class="sudo-var-font">PlayStation 4</a>
                         <a class="sudo-var-font">PlayStation 5</a>
-                        <a class="sudo-var-font">Nintendo Switch</a>
+                        <a class="sudo-var-font clickable">Nintendo Switch</a>
                         <a class="sudo-var-font">Xbox</a>
                         <a class="sudo-var-font">All Collections</a>
                     </div>
@@ -70,6 +70,7 @@
                 
                 <a class="oxanium-font">About Us</a>
             </nav>
+            
         </header>
         <main>
             <section class="wide-center product-card">
@@ -84,7 +85,7 @@
                         <h2 class="product-page-subtitle">(Nintendo Switch Premium Edition)</h2>
                         <h3 class="product-page-price">$59.99 AUD</h3>
                     </div>
-                    <button class="bold-button wide-center" type="button">Add to Cart</button>
+                    <button class="bold-button wide-center clickable" type="button">Add to Cart</button>
                     <div class="flex-row space-content">
                         <p class="product-tag">In Stock</p>
                         <p class="product-tag">Add to Wishlist</p>
@@ -111,7 +112,7 @@
             <section class="wide-center">
                 <h2 class="section-heading">More Like This</h2>
                 <div class="flex-row carousel">
-                    <div class="product-card">
+                    <div class="product-card clickable">
                         <div class="tile-bg">
                             <img src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
                         </div>
