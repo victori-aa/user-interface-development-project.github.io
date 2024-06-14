@@ -81,21 +81,21 @@ main {
     font-style: normal;
 }
 
-.product-page-title {
+.large-title {
     font-family: "Oxanium", sans-serif;
     font-size: 8em;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-.product-page-subtitle {
+.large-subtitle {
     font-family: "Oxanium", sans-serif;
     font-size: 7em;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-.product-page-price {
+.large-price {
     font-family: 'Sudo Var', sans-serif;
     font-size: 8em;
     font-optical-sizing: auto;
