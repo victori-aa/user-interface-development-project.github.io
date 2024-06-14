@@ -84,31 +84,67 @@
 }
 
 
-.product-card{
-    flex: 1;
+.carousel{
     display: flex;
-    flex-direction: column;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.product-card{
+    width: 70vw;
     text-align: center;
-    align-items: center;
-    padding-top: 1rem;
-    width: 30%;
-    height: 30%;
     transition: transform 0.3s ease;
 }
 
-.product-card:hover {
-    transform: scale(1.05);
-}
-
 .product-card img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
+    width: 35vw;
 }
 
-.product-card-text {
-    margin: 1rem 0;
+@media (min-width: 580px){
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .carousel .product-card{
+        width: 25vw;
+        height: 25vw;
+    }
+    .product-card img {
+        width: 10vw;
+    }
 }
+
+.product-view .tile-bg{
+    justify-content: center;
+    height: 90vw;
+}
+.product-view img {
+    width: 45vw;
+}
+
+@media (min-width: 580px){
+    .product-view{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .product-view .tile-bg{
+        height: 40vw;
+        width: 40vw;
+    }
+    .product-view img {
+        width: 20vw;
+    }
+    .product-view > div:last-child{
+        margin-inline: auto;
+    }
+    .bold-button{
+        width: 30vw;
+    }
+
+}
+
 
 .product-card .title,
 .product-card .subtitle,
@@ -124,6 +160,17 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0);
+}
+
+@media (min-width: 580px){
+    .tile-bg-desktop{
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0);
+    }
 }
 
 .white-tile-bg{
