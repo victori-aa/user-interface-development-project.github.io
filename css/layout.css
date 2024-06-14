@@ -1,7 +1,11 @@
 .wide-center {
     width: 90vw;
     margin-inline: auto;
-
+}
+@media (min-width:580px) {
+    .wide-center {
+        width: 85vw;
+    }
 }
 
 #landing-art{
@@ -24,6 +28,46 @@
     height: 90vw;
     display: block;
     position: absolute;
+}
+
+@media (min-width:580px) { 
+    #landing-art{
+        height: calc((100vh - var(--desktop-header-height) - var(--desktop-nav-height)));
+        max-height: calc(100vh - var(--desktop-header-height) - var(--desktop-nav-height));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 85vw;
+    }
+    #landing-art div:first-of-type{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        height: calc(100vh - var(--desktop-header-height) - var(--desktop-nav-height));
+        max-height: calc(100vh - var(--desktop-header-height) - var(--desktop-nav-height));
+    }
+    
+    #landing-art h1:first-of-type{
+        margin: 0;
+        position: relative;
+    }
+    #landing-art h1:last-of-type{
+        margin: 0;
+        position: relative;
+    }
+
+    .layer-imgs{
+        height: 40vw;
+        position: relative;
+        
+
+    }
+    .layer-imgs img{
+        height: 40vw;
+        right: 0;
+    }
 }
 
 
@@ -91,7 +135,7 @@
     border: solid 2px white;
 }
 
-.grid{
+.featured{
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
@@ -105,16 +149,70 @@
     justify-content: center;
 }
 
+@media (min-width:580px) { 
+    .featured{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 70vw;
+        margin-inline: auto;
+    }
+    .featured img{
+        width: 15vw;
+    }
+    .featured .tile-bg{
+        height: 15vw;
+    }
+}
+
 .blog-post{
     width: 90vw;
-    justify-content: space-around;
+    height: 150px;
+    justify-content: space-between;
+    margin-bottom: 5em;
 }
 .blog-post img{
-    width: 40vw;
+    border-radius: inherit;
+    width: 50vw;
+    height: 150px;
+    object-fit: cover;
+
 }
 .blog-post > div{
-    width: 40vw;
+    width: 35vw;
 }
+@media (min-width:580px) { 
+    .blog-post{
+        height: 200px;
+        width: 45vw;
+    }
+    .blog-post > div{
+        width: 20vw;
+        margin-right: 2.5vw;
+    }
+    .blog-post img{
+        width: 20vw;
+        height: 200px;
+    }
+}
+
+@media (min-width:580px) { 
+    .reviews{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70vw;
+        margin-inline: auto;
+    }
+    .reviews > div {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        
+    }
+    .reviews img{
+        width: 20vw;
+    }
+}
+
  
 .icon{
     width: 30px;

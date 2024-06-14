@@ -4,144 +4,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 .oxanium-font {
-  font-family: "Oxanium", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .sudo-var-font {
-  font-family: 'Sudo Var', sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: 'Sudo Var', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .press-start-2p-regular {
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
   
 .outfit-font {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 main {
-  color: #282961;
-  font-size: 4px;
+    color: #282961;
+    font-size: 4px;
 }
 
 .large-heading {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 6.5em;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 6.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .large-heading {
+        font-size: 15em;
+    }
 }
 
 .section-heading {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 6em;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 6em;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 5em;
 }
 
 .subheading {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 3em;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 3em;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .title {
-  font-family: "Oxanium", sans-serif;
-  font-size: 5em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oxanium", sans-serif;
+    font-size: 5em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .subtitle {
-  font-family: "Oxanium", sans-serif;
-  font-size: 4em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oxanium", sans-serif;
+    font-size: 4em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .price {
-  font-family: 'Sudo Var', sans-serif;
-  font-size: 5em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: 'Sudo Var', sans-serif;
+    font-size: 5em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .product-page-title {
-  font-family: "Oxanium", sans-serif;
-  font-size: 8em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oxanium", sans-serif;
+    font-size: 8em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .product-page-subtitle {
-  font-family: "Oxanium", sans-serif;
-  font-size: 7em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oxanium", sans-serif;
+    font-size: 7em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .product-page-price {
-  font-family: 'Sudo Var', sans-serif;
-  font-size: 8em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: 'Sudo Var', sans-serif;
+    font-size: 8em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .bold-button {
-  font-family: "Oxanium", sans-serif;
-  font-size: 8em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oxanium", sans-serif;
+    font-size: 8em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .small-button {
-  font-family: "Oxanium", sans-serif;
-  font-size: 4em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oxanium", sans-serif;
+    font-size: 4em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .product-tag {
-  font-family: 'Sudo Var', sans-serif;
-  font-size: 6em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: 'Sudo Var', sans-serif;
+    font-size: 6em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .product-quantity {
-  font-family: 'Sudo Var', sans-serif;
-  font-size: 4em;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: 'Sudo Var', sans-serif;
+    font-size: 4em;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .form-input {
-  font-family: "Oxanium", sans-serif;
-  font-size: 3em;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: bold;
-  opacity: 0.5;
-  color: #282961;
+    font-family: "Oxanium", sans-serif;
+    font-size: 3em;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    opacity: 0.5;
+    color: #282961;
 }
 
 input::placeholder {
-  font-family: "Oxanium", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: bold;
-  color: #282961;
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    color: #282961;
 }
 
 
 #landing-art h1:last-of-type{
-  text-align: right;
+    text-align: right;    
+}
+
+@media (min-width:580px) { 
+    #landing-art h1:last-of-type{
+        text-align: left;
+    }
 }

@@ -1,6 +1,6 @@
 :root {
     --mobile-header-height: 80px;
-    --desktop-header-height: 120px;
+    --desktop-header-height: 100px;
     --desktop-nav-height: 40px;
 
     --nav-num-elems: 5;
@@ -281,6 +281,7 @@ main{
     height: fit-content;
     padding-top: var(--mobile-header-height);
 
+
 }
 
 
@@ -291,6 +292,10 @@ main{
     }
     main{
         min-height: calc(100vh - var(--desktop-header-height)); 
+        
+    }
+    main > section:first-of-type{
+        margin-top: calc(var(--desktop-nav-height) * 1.5);
     }
 }
 
