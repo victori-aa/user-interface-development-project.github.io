@@ -1,11 +1,21 @@
-
-
 .wide-center {
     width: 90vw;
     margin-inline: auto;
 
 }
 
+#landing-art{
+    height: calc(100vh - var(--mobile-header-height));
+    max-height: calc(100vh - var(--mobile-header-height));
+}
+#landing-art div:first-of-type{
+    margin-top: 12em;
+}
+#landing-art h1:last-of-type{
+    position: absolute;
+    margin-top: 100vw;
+    width: 90vw;
+}
 .layer-imgs{
     height: 90vw;
 }

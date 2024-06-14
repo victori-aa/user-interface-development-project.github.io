@@ -34,7 +34,7 @@ main {
 
 .large-heading {
   font-family: "Press Start 2P", system-ui;
-  font-size: 12em;
+  font-size: 6.5em;
   font-weight: 400;
   font-style: normal;
 }
@@ -141,3 +141,7 @@ input::placeholder {
   color: #282961;
 }
 
+
+#landing-art h1:last-of-type{
+  text-align: right;
+}
