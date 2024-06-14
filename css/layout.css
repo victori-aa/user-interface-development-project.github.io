@@ -1,12 +1,5 @@
-:root {
-    --mobile-header-height: 4em;
-} 
-.company-logo{
-    height: calc(var(--mobile-header-height)/3)
-}
 
 
-/*
 .wide-center {
     width: 90vw;
     margin-inline: auto;
@@ -22,7 +15,7 @@
     display: block;
     position: absolute;
 }
-*/
+
 
 .flex-row{
     display: flex;
@@ -36,66 +29,6 @@
     align-items: center;
 }
 
-.landing-page {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    max-width: 1200px; 
-}
-
-.landing-text {
-    flex: 2;
-    max-width: 50%;
-}
-
-.landing-images {
-    position: relative;
-    flex: 1;
-    max-width: 50%;
-    height: 100%;
-    display:flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.landing-images picture {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.landing-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-#synthwave-sun {
-    z-index: 1;
-}
-
-#gamer {
-    z-index: 2;
-}
-
-
-.section { 
-    margin: 2rem 4rem;
-}
-
-.flex-row-products{
-    display: flex;
-    justify-content: space-between; /* Ensure equal spacing between cards */
-    gap: 1rem; /* Adjust gap as needed */
-}
 
 .product-card{
     flex: 1;
@@ -154,8 +87,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.consoles img{
+.featured img{
     width: 40vw;
+}
+.featured .tile-bg{
+    height: 40vw;
+    justify-content: center;
 }
 
 .blog-post{

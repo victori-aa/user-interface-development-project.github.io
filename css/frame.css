@@ -1,5 +1,5 @@
 :root {
-    --mobile-header-height: 4em;
+    --mobile-header-height: 80px;
     --desktop-header-height: 120px;
     --desktop-nav-height: 40px;
 
@@ -13,6 +13,10 @@ body{
 
 
 /* PAGE HEADER */
+.company-logo{
+    height: calc(var(--mobile-header-height)/3)
+}
+
 header{
     position: fixed;
     top: 0;
