@@ -15,3 +15,8 @@ input:focus::placeholder {
     cursor: pointer;
 }
 
+@media (min-width:580px){
+    .desktop-hidden{
+        visibility: hidden;
+    }
+}

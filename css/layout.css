@@ -162,6 +162,25 @@
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
+.white-tile-bg{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: solid 2px white;
+}
+
+.white-tile-bg-mobile{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: solid 2px white;
+}
+
+
 @media (min-width: 580px){
     .tile-bg-desktop{
         background: rgba(255, 255, 255, 0.2);
@@ -171,16 +190,13 @@
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0);
     }
+    .white-tile-bg-mobile{
+        background :none;
+        box-shadow: none;
+        border: none;
+    }
 }
 
-.white-tile-bg{
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 24px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: solid 2px white;
-}
 
 .featured{
     display: grid;
@@ -346,9 +362,11 @@
 .cart-product{
     position: relative;
     padding: 1em;
-    gap: 1em;
     margin-bottom: 1em;
     z-index: 1;
+    height: 40em;
+    justify-content: center;
+    gap: 7vw;
 }
 .cart-product > div{
     width: 50vw;
@@ -356,10 +374,62 @@
 }
 .cart-product img{
     width: 20vw;
+    border-radius: 6px;
 }
 
 .cart-product h2, .cart-product h3{
     margin: 0;
+}
+
+.cart-summary > div{
+    width: 85vw;
+}
+.cart-summary > .bold-button{
+    width: 85vw;
+}
+
+@media (min-width:580px){
+    .cart-product{
+        width: 70vw;
+        max-width: 1000px;
+        height: 75em;
+        margin-inline: auto;
+    }
+    .cart-product img{
+        width: 160px;
+        margin-left: 3vw;
+    }
+    .cart-product > div{
+        display: flex;
+        flex-direction: row;
+        width: 45vw;
+        justify-content: space-between;
+    }
+    .cart-product h2{
+        width: 100%;
+    }
+    .cart-product > div > div:first-of-type {
+        justify-content: center;
+    }
+    .cart-product > div > div:last-of-type{
+        gap: 4vw;
+        margin-right: 3vw;
+    }
+    .cart-summary{
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .cart-summary .white-tile-bg-mobile{
+        width: 30vw;
+        
+    }
+    .cart-summary > .bold-button{
+        width: 30vw;
+        
+    }
+    
 }
 
 .small-inline-sp{
@@ -387,7 +457,7 @@
 }
 
 .bold-button{
-    height: 4em;
+    height: 2em;
     border-radius: 12px;
     margin-block: 1em;
     color: white;
