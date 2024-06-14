@@ -47,59 +47,107 @@ main {
 
 .section-heading {
     font-family: "Press Start 2P", system-ui;
-    font-size: 6em;
+    font-size: 4em;
     font-weight: 400;
     font-style: normal;
     margin-top: 5em;
 }
 
-.subheading {
+@media (min-width:580px) { 
+    .section-heading {
+        font-size: 5em;
+    }
+}
+
+.section-subheading {
     font-family: "Press Start 2P", system-ui;
     font-size: 3em;
     font-weight: 400;
     font-style: normal;
 }
 
-.title {
-    font-family: "Oxanium", sans-serif;
-    font-size: 5em;
-    font-optical-sizing: auto;
-    font-style: normal;
+@media (min-width:580px) { 
+    .section-subheading {
+        font-size: 4em;
+    }
 }
 
-.subtitle {
+.title {
     font-family: "Oxanium", sans-serif;
     font-size: 4em;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-.price {
-    font-family: 'Sudo Var', sans-serif;
-    font-size: 5em;
+@media (min-width:580px) { 
+    .title {
+        font-size: 5em;
+    }
+}
+
+.subtitle {
+    font-family: "Oxanium", sans-serif;
+    font-size: 3em;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .subtitle {
+        font-size: 4em;
+    }
+}
+
+.price {
+    font-family: 'Sudo Var', sans-serif;
+    font-size: 4em;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .price {
+        font-size: 5em;
+    }
 }
 
 .large-title {
-    font-family: "Oxanium", sans-serif;
-    font-size: 8em;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-.large-subtitle {
     font-family: "Oxanium", sans-serif;
     font-size: 7em;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-.large-price {
-    font-family: 'Sudo Var', sans-serif;
-    font-size: 8em;
+@media (min-width:580px) { 
+    .large-title {
+        font-size: 8em;
+    }
+}
+
+.large-subtitle {
+    font-family: "Oxanium", sans-serif;
+    font-size: 6em;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .large-subtitle {
+        font-size: 7em;
+    }
+}
+
+.large-price {
+    font-family: 'Sudo Var', sans-serif;
+    font-size: 7em;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .large-price {
+        font-size: 8em;
+    }
 }
 
 .bold-button {
@@ -118,9 +166,15 @@ main {
 
 .product-tag {
     font-family: 'Sudo Var', sans-serif;
-    font-size: 6em;
+    font-size: 5em;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .product-tag {
+        font-size: 6em;
+    }
 }
 
 .product-quantity {
@@ -128,6 +182,12 @@ main {
     font-size: 4em;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .product-quantity {
+        font-size: 5em;
+    }
 }
 
 .form-input {
@@ -138,6 +198,12 @@ main {
     font-weight: bold;
     opacity: 0.5;
     color: #282961;
+}
+
+@media (min-width:580px) { 
+    .form-input {
+        font-size: 4em;
+    }
 }
 
 input::placeholder {
