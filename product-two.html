@@ -108,8 +108,8 @@
                 </div>
             </section>
 
-            <section class="wide-center">
-                <h2 class="section-heading">More Like This</h2>
+            <section>
+                <h2 class="section-heading wide-center">More Like This</h2>
                 <div class="flex-row carousel">
                     <div class="clickable tile-bg product-card">
                         <div>
@@ -135,6 +135,14 @@
                         <h4 class="subtitle">(Nintendo Switch Physical Edition)</h4>
                         <p class="price">$59.99 AUD</p>
                     </div> 
+                </div>
+                <div class="carousel-toggle flex-row space-content">
+                    <div onclick="arrowClick('left')">
+                        <img class="icon left" src="icons/caret-right.svg" alt="arrow facing left"> 
+                    </div>
+                    <div onclick="arrowClick('right')">
+                        <img class="icon right" src="icons/caret-right.svg" alt="arrow facing right"> 
+                    </div>
                 </div>
             </section>
             <br>
@@ -198,5 +206,6 @@
         </footer>
 
         <script src="js/frame.js"></script>
+        <script src="js/carousel.js"></script>
     </body>
 </html>

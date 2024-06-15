@@ -8,13 +8,13 @@ let leftArrow = arrows[0];
 let rightArrow = arrows[1];
 
 leftArrow.style.visibility = "hidden";
-let scrollIncrement = window.innerWidth * 0.9;
 
+//  scrolls the product carousel when an arrow is clicked
 function arrowClick(arrow){
     if (arrow == LEFT){
         carouselIndex--;
         carousel.scrollTo({
-            left: carousel.scrollLeft - scrollIncrement,   
+            left: (carouselIndex * window.innerWidth),   
             behavior: 'smooth'
         });
         rightArrow.style.visibility = "visible";
@@ -25,7 +25,7 @@ function arrowClick(arrow){
     else if (arrow == RIGHT){
         carouselIndex++;
         carousel.scrollTo({
-            left: carousel.scrollLeft + scrollIncrement,   
+            left: (carouselIndex * window.innerWidth),   
             behavior: 'smooth'
         });
         leftArrow.style.visibility = "visible";
