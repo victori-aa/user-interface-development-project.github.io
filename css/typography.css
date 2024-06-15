@@ -224,3 +224,7 @@ input::placeholder {
         text-align: left;
     }
 }
+
+a {
+    all: unset;
+}
