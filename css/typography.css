@@ -177,6 +177,13 @@ main {
     }
 }
 
+.filter {
+    font-family: 'Sudo Var', sans-serif;
+    font-size: 4em;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 .product-quantity {
     font-family: 'Sudo Var', sans-serif;
     font-size: 4em;
