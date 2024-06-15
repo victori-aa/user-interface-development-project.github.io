@@ -78,7 +78,10 @@
                 <a>&lt;&nbsp;&nbsp;&nbsp;Back to Browsing</a>
                 <div class="product-view tile-bg-desktop">
                     <div class="tile-bg flex-row">
-                        <img src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
+                        <div class="zoom-container">
+                            <div id="zoom-img" class="zoom overlap" onmousemove="zoom(event);"></div>
+                            <img id="cover" class="static overlap" src="images/products/what-the-golf.png">
+                        </div>
                     </div>
                     <div>
                         <div>
@@ -208,5 +211,6 @@
 
         <script src="js/frame.js"></script>
         <script src="js/carousel.js"></script>
+        <script src="js/product-zoom.js"></script>
     </body>
 </html>

@@ -702,3 +702,27 @@ form.payment input[type=checkbox], form.payment input[type=checkbox] + label{
     height: 30px;
     text-indent: 1em;
 }
+
+
+.zoom-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.zoom-container .zoom {
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+    cursor: zoom-in;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    transition: background-size 0.25s;
+}
+.zoom-container .overlap {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.static {
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
