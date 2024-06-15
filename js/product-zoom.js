@@ -26,6 +26,7 @@ function zoom(e) {
 //  activates zoom when mouse overs an image
 function listenZoom() {
     if (window.innerWidth >= 580) {
+        zoomImg.style.cursor = "zoom";
         zoomImg.addEventListener("mouseenter", handleMouseEnter);
         zoomImg.addEventListener("mouseleave", handleMouseLeave);
     } else {
