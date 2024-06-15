@@ -80,7 +80,7 @@
                     <div class="tile-bg flex-row">
                         <div class="zoom-container">
                             <div id="zoom-img" class="zoom overlap" onmousemove="zoom(event);"></div>
-                            <img id="cover" class="static overlap" src="images/products/what-the-golf.png">
+                            <img id="cover" class="static overlap" src="images/products/what-the-golf.png" alt="cover of What the Golf? Physical Edition">
                         </div>
                     </div>
                     <div>
@@ -92,8 +92,14 @@
                         <button class="bold-button wide-center clickable" type="button">Add to Cart</button>
                         
                         <div class="flex-row space-content">
-                            <p class="product-tag">In Stock</p>
-                            <p class="product-tag">Add to Wishlist</p>
+                            <div class="flex-row">
+                                <img class="icon status" src="icons/check.svg" alt="checkmark"> 
+                                <p class="product-tag">In Stock</p>
+                            </div>
+                            <div class="flex-row">
+                                <img class="icon status" src="icons/heart.svg" alt="heart"> 
+                                <p class="product-tag">Add to Wishlist</p>
+                            </div>
                         </div>
                     </div>
                 </div>

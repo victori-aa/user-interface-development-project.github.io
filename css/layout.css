@@ -193,7 +193,7 @@
     justify-content: center;
     height: 90vw;
 }
-.product-view img {
+.product-view .overlap {
     width: 45vw;
 }
 
@@ -207,7 +207,7 @@
         height: 40vw;
         width: 40vw;
     }
-    .product-view img {
+    .product-view .overlap {
         width: 20vw;
     }
     .product-view > div:last-child{
@@ -608,6 +608,10 @@ form ::placeholder{
     border-radius: 6px;
     border: solid white 1px;
     background-color: white;
+}
+.icon.status{
+    width: 18px;
+    margin-right: 10px;
 }
 
 
