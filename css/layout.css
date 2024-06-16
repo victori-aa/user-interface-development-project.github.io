@@ -145,6 +145,13 @@
     margin-right: 15vw;
 }
 
+.carousel > .product-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .carousel .product-card-text{
     width: 70%;
     margin: auto auto 10em auto;
@@ -775,4 +782,15 @@ form.payment input[type=checkbox], form.payment input[type=checkbox] + label{
     height: 100%;
     width: 100%;
     pointer-events: none;
+}
+
+
+@media (min-width: 580px){
+    .description > div{
+        padding: 4em;
+    }
+}
+
+.product-quantity p{
+    margin-inline: 0.5em; 
 }
