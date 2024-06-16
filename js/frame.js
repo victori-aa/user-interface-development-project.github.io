@@ -66,7 +66,7 @@ addEventListener("resize", async (event) => {
         dropdowns[i].lastElementChild.removeAttribute("style");
         
     }
-    for (let i = 0; i < dropdownMenus.length; i++){
+    for (let i = 0; i < navSections.length; i++){
         navSections[i].removeAttribute("style");
     }
 
@@ -253,6 +253,9 @@ function searchIconClicked(){
     //  mobile resolution
     if (window.innerWidth < 580){
         toggleMobileNav();
+    }
+    else{
+        window.location.href = "browse.html";
     }
 }
 

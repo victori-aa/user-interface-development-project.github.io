@@ -22,12 +22,17 @@ header{
     top: 0;
     z-index: 2;
 }
+
+header ::placeholder{
+    color: white !important;
+}
+
 header > section{
     width: 100vw;
     height: var(--mobile-header-height);
     justify-content: space-evenly;
-    background-color: rgba(var(--frame-col), 0.3);
-    backdrop-filter: blur(5px);
+    background-color: rgba(var(--frame-col), 0.6);
+    backdrop-filter: blur(10px);
 }
 
 .icon.menu, header .icon.search{
@@ -79,7 +84,7 @@ header > section{
     padding: 0;
     outline: none;
     border: none;
-    background-color: rgba(var(--frame-col), 0.4);
+    background-color: rgba(var(--frame-col), 0.8);
     border-radius: 5px 0 0 5px;
     text-indent: 0.7em;
     outline-color: white;
@@ -96,9 +101,8 @@ header > section{
 
 
 #search-bar :focus{
-    background-color: rgba(var(--frame-col), 0.2);
+    background-color: rgba(var(--frame-col), 0.9);
 }
-
 
 .company-name{
     text-wrap: nowrap; 
@@ -113,12 +117,18 @@ nav{
     color: rgb(var(--accent-col));
 
     background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     transition: left 0.7s;
 }
 nav a{
     display: block;
     white-space: nowrap;
+    font-size: 1.1em;
+}
+nav > a,
+nav > div > a:first-child{
+    width: 40vw;
+    margin: 1em auto 1em auto;
 }
 nav.open{
     left: 0;
@@ -131,9 +141,9 @@ nav.open{
     left: 50vw;
     bottom: 0;
     transition: width 0.7s;
-
-    /*  temporary */
-    background-color: rgba(60, 60, 60, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    color: rgb(var(--frame-col));
     
 }
 .dropdown-content.open{
@@ -144,6 +154,8 @@ nav.open{
     visibility: hidden;
     opacity: 0;
     transition-duration: 0.2s;
+    width: 40vw;
+    margin: 1em auto 1em auto;
 }
 .dropdown-content a.open{
     visibility: visible;
@@ -175,21 +187,25 @@ nav.open{
     }
     nav a{
         display: block;
+        position: relative;
         text-align: center;
+        margin: 0 !important;
+        z-index: 9;
     }
     nav > a{
         height: 100%;
     }
 
+
     .dropdown-content{
         height: 0;
         visibility: hidden;
-        pointer-events: none;
         display: none;
         width: calc(100vw/var(--nav-num-elems));
         top: calc(var(--desktop-nav-height));
         left: auto;
         transition: height 0.3s;
+
         
     }
     .dropdown-content.open{
@@ -198,6 +214,7 @@ nav.open{
 
     }
     .dropdown-content a{
+        width: auto;
         transition-duration: 1s;
     }
 
@@ -211,8 +228,7 @@ nav.open{
         border-radius: 5px;
         display: flex;
         flex-direction: row;
-        width: auto
-        
+        width: auto;        
     }
     
     #search-bar input{
@@ -230,7 +246,6 @@ nav.open{
         left: auto;
         top: auto;    
         text-indent: 0;
-
     }
 
     .header-controls{
@@ -309,6 +324,11 @@ footer{
     font-size: 16px;
     font-weight: 600;
 }
+
+footer ::placeholder{
+    color: white !important;
+}
+
 footer > section{
     margin-inline: auto;
     width: 75vw;
