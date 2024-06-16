@@ -505,6 +505,10 @@
     margin: 0;
 }
 
+.cart-product .price,
+.cart-summary .price{
+    width: 100px;
+}
 
 .cart-summary > div{
     justify-content: center;
@@ -794,6 +798,20 @@ form.payment input[type=checkbox], form.payment input[type=checkbox] + label{
     }
 }
 
+
+.product-quantity{
+    height: 1.5em;
+    border-radius: 6px;
+}
+
+.product-quantity button{
+    height: 100%;
+    width: 1.8em;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: color 0s !important;
+}
+
 .product-quantity p{
-    margin-inline: 0.5em; 
+    margin-inline: 0.75em; 
 }

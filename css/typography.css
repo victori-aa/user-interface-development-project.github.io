@@ -216,6 +216,10 @@ main {
     }
 }
 
+.product-quantity button{
+    font-weight: bold;
+}
+
 .form-input {
     font-family: "Oxanium", sans-serif;
     font-size: 3em;
