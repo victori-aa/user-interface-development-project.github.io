@@ -83,7 +83,6 @@
             </section>
             <section class="wide-center">
                 <div class="white-tile-bg med-bot-margin">
-                    <!-- TODO: order summary needs styling -->
                     <h2 class="med-inline-margin section-subheading">Order Summary</h2>
                     <div class="large-inline-margin">
                         <div class="flex-row space-content">
@@ -153,17 +152,17 @@
             </section>
             
             <section>
-                <div class="newsletter">
+                <form class="newsletter">
                     <p class="oxanium-font">Stay in the Loop</p>
                     <div class="email-input flex-row">
-                        <input class="oxanium-font" type="text" name="email" placeholder="Email">
-                        <button id="email-submit" type="button" class="outfit-font">Submit</button>
+                        <input class="oxanium-font" type="email" name="email" placeholder="Email" required>
+                        <button id="email-submit" type="submit" class="outfit-font">Submit</button>
                     </div>
                     <div class="privacy-policy flex-row">
-                        <input type="checkbox" id="privacy" name="privacy">
+                        <input type="checkbox" id="privacy" name="privacy" required>
                         <label class="sudo-var-font" for="privacy"> I agree to subscribe to updates from GD&nbspGames. <a href="#">Privacy&nbspPolicy</a></label>    
                     </div>
-                </div>
+                </form>
                 
                 <div class="socials flex-row">
                     <img class="icon" src="icons/phone.png" alt="arrow facing right">
@@ -180,7 +179,6 @@
             </section>
             
         </footer>
-    
         <script src="js/frame.js"></script>
     </body>
     
