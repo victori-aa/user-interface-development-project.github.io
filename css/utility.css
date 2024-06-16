@@ -17,7 +17,7 @@ input:focus::placeholder {
 
 .clickable:hover{
     transition: color 0.5s;
-    color: #FE6F47;
+    color: rgb(var(--hover-col));
 }
 
 @media (min-width:580px){

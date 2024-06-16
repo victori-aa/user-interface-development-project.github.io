@@ -80,19 +80,21 @@ addEventListener('scroll', function() {
     let header = document.querySelector('header');
     let footer = document.querySelector('footer');
     
-    let headerRect = header.getBoundingClientRect();
-    let footerRect = footer.getBoundingClientRect();
-    let navRect = navBar.getBoundingClientRect();
-    
-    //  hide header
-    if ((window.innerWidth < 580 && headerRect.height >= footerRect.top)
-        || (window.innerWidth > 580 && headerRect.height + navRect.height >= footerRect.top)) {
+    if (footer){
+        let headerRect = header.getBoundingClientRect();
+        let footerRect = footer.getBoundingClientRect();
+        let navRect = navBar.getBoundingClientRect();
         
-        header.style.opacity = "0";
-        closeSearchBar();
-    } 
-    else {
-        header.removeAttribute("style");
+        //  hide header
+        if ((window.innerWidth < 580 && headerRect.height >= footerRect.top)
+            || (window.innerWidth > 580 && headerRect.height + navRect.height >= footerRect.top)) {
+            
+            header.style.opacity = "0";
+            closeSearchBar();
+        } 
+        else {
+            header.removeAttribute("style");
+        }
     }
 });
 

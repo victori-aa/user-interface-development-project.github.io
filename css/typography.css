@@ -59,6 +59,23 @@ main {
     }
 }
 
+.med-section-heading {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 4em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (min-width:580px) { 
+    .med-section-heading {
+        font-size: 5em;
+    }
+    .top-spacing{
+        margin-top: 5em;
+    }
+}
+
+
 .section-subheading {
     font-family: "Press Start 2P", system-ui;
     font-size: 3em;
