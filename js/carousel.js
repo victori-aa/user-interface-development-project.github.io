@@ -14,7 +14,7 @@ function arrowClick(arrow){
     if (arrow == LEFT){
         carouselIndex--;
         carousel.scrollTo({
-            left: (carouselIndex * window.innerWidth),   
+            left: (carouselIndex * window.innerWidth)/2,   
             behavior: 'smooth'
         });
         rightArrow.style.visibility = "visible";

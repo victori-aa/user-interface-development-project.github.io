@@ -88,6 +88,7 @@ header > section{
     text-indent: 0.7em;
     outline-color: white;
     outline-style: solid;
+    color: white;
 
     height: 30px;
     outline-width: 1px;

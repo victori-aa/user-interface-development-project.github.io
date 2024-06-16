@@ -16,7 +16,6 @@ let searchIcon = searchSubmit.querySelector("picture");
 let searchButton = searchSubmit.querySelector("button");
 
 
-
 if (window.innerWidth > 580){
     adjustNavSectionSize();
 }
@@ -257,8 +256,12 @@ function searchIconClicked(){
         toggleMobileNav();
     }
     else{
-        window.location.href = "browse.html";
+        search();
     }
+}
+
+function search(){
+    window.location.href = "browse.html";
 }
 
 function toggleMobileNav(){

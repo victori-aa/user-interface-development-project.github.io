@@ -136,8 +136,6 @@
     display: flex;
     overflow-x: hidden;
     gap: 30vw;
-    justify-content: center;
-    align-items: center;
 }
 .carousel > .product-card:first-child{
     margin-left: 15vw;
