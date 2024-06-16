@@ -343,15 +343,20 @@
     justify-content: space-around;
     width: 85vw;
     margin-inline: auto;
+    gap: 5vw;
 }
 .reviews > div {
     display: flex;
     flex-direction: row;
-    
 }
+
+.reviews > div > div{
+    margin-inline: 5vw;
+}
+
 .reviews img{
     width: 25vw;
-    margin-inline: 5vw;
+    margin: 5vw;
 }
 
 @media (min-width:580px) { 
@@ -361,11 +366,14 @@
     }
     .reviews > div {
         flex-direction: column;
-        width: 20vw;
-        
+        width: 20vw;   
+    }
+    .reviews > div > div{
+        margin: 10%;
     }
     .reviews img{
         width: 20vw;
+        margin: 0;
     }
 }
 
@@ -382,6 +390,7 @@
     justify-content: space-between;
     margin-top: 5em;
     margin-bottom: 5em;
+    padding-inline: 5em;
 }
 
 @media (min-width:580px) { 
@@ -394,6 +403,7 @@
     }
     #filter-desktop .tile-bg{
        width: 13vw;
+       padding-inline: 0.5em;
     }
     #filter-desktop h2{
         text-align: left;
@@ -427,6 +437,9 @@
     width: 40vw;
 }
 .products div > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40vw;
     width: 40vw;
 }
@@ -474,10 +487,13 @@
     margin: 0;
 }
 
+
 .cart-summary > div{
+    justify-content: center;
     width: 85vw;
+    gap: 50vw;
 }
-.cart-summary > .bold-button{
+.cart-summary .bold-button{
     width: 85vw;
 }
 
@@ -539,16 +555,17 @@
 
 
     .cart-summary{
-        width: 70vw;
+        width: 60vw;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
     }
-    .cart-summary .white-tile-bg-mobile{
+    .cart-summary > div{
+        justify-content: center;
         width: 30vw;
-        
+        gap: 17vw;
     }
-    .cart-summary > .bold-button{
+    .cart-summary .bold-button{
         width: 30vw;
         
     }    

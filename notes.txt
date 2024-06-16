@@ -1,4 +1,0 @@
-colours don't seem to be rendering the same on web as figma
-need favicon
-should color code mobile search icon to bar
-placeholder text not centered
