@@ -136,6 +136,8 @@
     display: flex;
     overflow-x: hidden;
     gap: 30vw;
+    justify-content: center;
+    align-items: center;
 }
 .carousel > .product-card:first-child{
     margin-left: 15vw;
@@ -143,6 +145,11 @@
 
 .carousel > .product-card:last-child{
     margin-right: 15vw;
+}
+
+.carousel .product-card-text{
+    width: 70%;
+    margin: auto auto 10em auto;
 }
 
 .carousel-toggle{
@@ -190,7 +197,6 @@
     }
     .carousel .product-card{
         width: 25vw;
-        height: 25vw;
     }
     .product-card img {
         width: 10vw;
@@ -209,7 +215,7 @@
     .product-view{
         display: flex;
         flex-direction: row;
-
+        margin-bottom: 10em;
     }
     .product-view .tile-bg{
         height: 40vw;
@@ -220,6 +226,9 @@
     }
     .product-view > div:last-child{
         margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .bold-button{
         width: 30vw;
@@ -564,11 +573,12 @@
     .cart-summary > div{
         justify-content: center;
         width: 30vw;
+        max-width: 450px; 
         gap: 17vw;
     }
     .cart-summary .bold-button{
         width: 30vw;
-        
+        max-width: 450px;
     }    
 }
 
