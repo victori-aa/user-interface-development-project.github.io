@@ -579,10 +579,10 @@
         align-items: flex-end;
     }
     .cart-summary > div{
-        justify-content: center;
+        justify-content: space-around;
         width: 30vw;
         max-width: 450px; 
-        gap: 17vw;
+        gap: inherit;
     }
     .cart-summary .bold-button{
         width: 30vw;
