@@ -14,7 +14,7 @@
 
 #landing-art{
     height: calc(100vh - var(--mobile-header-height));
-    max-height: calc(100vh - var(--mobile-header-height));
+    max-height: 55vh;
 }
 #landing-art div:first-of-type{
     margin-top: 12em;
